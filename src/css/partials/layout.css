@@ -26,12 +26,16 @@ h1 {
   font-size: var(--font-size-fluid-3);
 }
 
-button.btn-custom {
+button {
   padding-block: 0.75ch;
   padding-inline: var(--size-relative-6);
+  background-image: var(--_bg);
+  color: var(--_text);
+}
+
+button.btn-custom {
   --_bg: linear-gradient(var(--indigo-5), var(--indigo-7));
   --_border: var(--indigo-6);
   --_text: var(--indigo-0);
   --_ink-shadow: 0 1px 0 var(--indigo-9);
-  background-image: var(--_bg);
 }

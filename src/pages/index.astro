@@ -1,35 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const title = 'Peter\'s website';
 ---
 
-<Layout title="Pete's website">
+<Layout title={title}>
 	<main>
 		<h1>Welcome to <span class="text-gradient">My Site</span></h1>
-		<button class="btn-custom">A hopefully big button</button>
-		<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button>
- 
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<button class="btn-custom">A standard button</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quis assumenda, in tempore et minus ipsa itaque reprehenderit a. Impedit, delectus! Tempore enim perferendis, nulla officiis delectus magni rerum illum!</p>
+
 	</main>
 </Layout>
