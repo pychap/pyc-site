@@ -11,5 +11,7 @@
 @import "open-props/media";
 
 /* my tweaks */
-@import "./partials/original-astro.css";
 @import "./partials/layout.css";
+@import "./partials/media-queries.css";
+
+@custom-selector :--heading h2, h3;
