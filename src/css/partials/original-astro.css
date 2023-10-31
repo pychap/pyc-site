@@ -1,6 +1,7 @@
 :root {
   --accent: 124, 58, 237;
   --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+
 }
 
 code {
@@ -11,7 +12,6 @@ code {
 main {
   margin: auto;
   padding: 1.5rem;
-  max-width: 60ch;
 }
 h1 {
   font-size: 3rem;

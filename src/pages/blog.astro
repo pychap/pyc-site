@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import BlogPost from "../components/BlogPost.astro";
 
+const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = "Peter's Blog";
 ---
 
@@ -14,5 +15,8 @@ const pageTitle = "Peter's Blog";
       officia dolores aliquam earum, dignissimos beatae quos minus, quod
       laboriosam quia assumenda cum ex ea in ad molestiae.
     </p>
+    <div class="blog-post__grid">
+      {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} /> )}
+    </div>
   </main>
 </Layout>
