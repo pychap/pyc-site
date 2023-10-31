@@ -39,3 +39,17 @@ button.btn-custom {
   --_text: var(--indigo-0);
   --_ink-shadow: 0 1px 0 var(--indigo-9);
 }
+
+.blog-post__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: var(--size-5);
+}
+
+@custom-media var(--md-n-below);
+@media (--md-n-below) {
+  .blog-post__grid {
+    grid-template-columns: 1fr;
+  }
+}
