@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Hero from '../components/Hero.astro';
 
 const title = 'Peter\'s website';
 ---
 
 <Layout title={title}>
+	<Hero />
 	<main>
 		<h1>Welcome to <span class="text-gradient">My Site</span></h1>
+		<h2>A wonderful day today.</h2>
 		<button class="btn-custom">A standard button</button>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quis assumenda, in tempore et minus ipsa itaque reprehenderit a. Impedit, delectus! Tempore enim perferendis, nulla officiis delectus magni rerum illum!</p>
 

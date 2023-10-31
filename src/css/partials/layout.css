@@ -4,6 +4,10 @@ html {
   --bg-dark-container: hsla(213, 9%, 23%, 1.00);
 }
 
+:--heading {
+  font-size: 5rem;
+}
+
 html.dark {
   background-color: var(--gray-9);
 }
@@ -11,7 +15,7 @@ html.dark {
 body {
   min-height: 100%;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: repeat(2, auto) 1fr auto;
 }
 
 nav {
@@ -21,8 +25,25 @@ nav {
 .dark nav {
   background-color: var(--bg-dark-container);
 }
+
+.hero {
+  grid-row: 3 / 4;
+
+}
+.hero h1 {
+  --font-size-fluid-4: clamp(2rem, 4vw, 4.0rem);
+  font-size: var(--font-size-fluid-4);
+}
 main {
-  grid-row: 2 / 3;
+  grid-row: 4 / 5;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+main.about, main.contact {
+  grid-row: 3 / 5;
 }
 
 .dark .card {
@@ -30,8 +51,8 @@ main {
 }
 
 footer {
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
 }
 
 .dark footer {
@@ -67,9 +88,18 @@ button.btn-custom {
   gap: var(--size-5);
 }
 
-@custom-media var(--md-n-below);
-@media (--md-n-below) {
-  .blog-post__grid {
-    grid-template-columns: 1fr;
-  }
+/* from astro */
+.text-gradient {
+  background-image: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+}
+.p-text-gradient {
+  background-image: var(--gradient-3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* background-size: 400%; */
+  background-position: 0%;
 }

@@ -7,6 +7,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "watch:css": "postcss src/css/styles.css -o dist/css/styles.css -w",
+    "build:css": "postcss src/css/styles.css -o dist/css/styles.css",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -20,6 +22,10 @@
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
-    "postcss-custom-media": "^10.0.2"
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-media": "^10.0.2",
+    "postcss-import": "^15.1.0",
+    "postcss-jit-props": "^1.0.14",
+    "postcss-preset-env": "^9.3.0"
   }
 }
