@@ -1,8 +1,8 @@
 ---
 const { url, title, description } = Astro.props;
 ---
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-  <a href={url}>
+<div class="card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:border-gray-700">
+  <a href={url} class="flex">
       <img class="rounded-t-lg" src="https://docs.astro.build/assets/rays.webp" alt="" />
   </a>
   <div class="p-5">

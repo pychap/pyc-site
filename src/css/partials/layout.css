@@ -1,7 +1,11 @@
 html {
   height: 100%;
   font-family: system-ui, sans-serif;
-  background-color: #F6F6F6;
+  --bg-dark-container: hsla(213, 9%, 23%, 1.00);
+}
+
+html.dark {
+  background-color: var(--gray-9);
 }
 
 body {
@@ -13,8 +17,16 @@ body {
 nav {
   grid-row: 1 / 2;
 }
+
+.dark nav {
+  background-color: var(--bg-dark-container);
+}
 main {
   grid-row: 2 / 3;
+}
+
+.dark .card {
+  background-color: var(--bg-dark-container);
 }
 
 footer {
@@ -22,8 +34,16 @@ footer {
   grid-row-end: 4;
 }
 
+.dark footer {
+  background-color: var(--bg-dark-container);
+}
+
 h1 {
   font-size: var(--font-size-fluid-3);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark ul, .dark li {
+  color: var(--gray-4);
 }
 
 button {
