@@ -1,10 +1,42 @@
-p {
-  font-family: var(--font-serif);
+@custom-selector :--heading h2, h3;
+@custom-selector :--font-heading h1;
+@custom-selector :--font-subhead h2, h3, h4, h5, h6;
+@custom-selector :--font-subhead-smaller h3, h4, h5, h6;
+@custom-selector :--font-bodyText p, ul, li, dd, dl;
+:--font-heading {
+  margin-block: var(--size-3);
+  font-family: 'Arvo', Georgia, serif;
+  font-size: var(--font-size-fluid-3);
+  line-height: var(--font-lineheight-00);
+}
+:--font-subhead {
+  margin-block-end: var(--size-2);
+  font-family: 'Karma', Georgia, serif;
+  font-size: var(--font-size-fluid-2);
+}
+:--font-subhead-smaller {
+  margin-block-end: var(--size-2);
+  font-family: 'Karma', Georgia, serif;
   font-size: var(--font-size-fluid-1);
 }
-
-.hero {
-  p {
-    font-family: var(--font-sans);
-  }
+:--font-bodyText {
+  margin-block-end: var(--size-2);
+  font-family: 'Maitree', Georgia, serif;
+  font-size: var(--font-size-fluid-0);
+  line-height: var(--font-lineheight-3);
+  font-weight: 300;
 }
+.hero h1 {
+  --font-size-fluid-4: clamp(3.8rem, 4vw, 5rem);
+  font-size: var(--font-size-fluid-4);
+}
+
+strong {
+  font-weight: var(--font-weight-7);
+}
+
+code {
+  font-size: var(--font-size-0);
+}
+
+
