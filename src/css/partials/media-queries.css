@@ -4,10 +4,15 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media (--md-n-below) {
   .blog-post__grid {
     grid-template-columns: 1fr;
   }
     
 }
 
+@media (--lg-n-below) {
+  .hero {
+    background-size: cover;
+  }
+}
