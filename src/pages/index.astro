@@ -1,18 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Hero from '../components/Hero.astro';
-
+// import { fade } from "astro:transitions";
 const title = 'Peter\'s website';
 ---
 
 <Layout title={title}>
 	<Hero />
 	<main>
-		<h1>Welcome to <span class="text-gradient">My Site</span></h1>
-		<h2>A wonderful day today.</h2>
-		<button class="btn-custom">A standard button</button>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quis assumenda, in tempore et minus ipsa itaque reprehenderit a. Impedit, delectus! Tempore enim perferendis, nulla officiis delectus magni rerum illum!</p>
+		<h1>Welcome to Front-end <span class="text-gradient">Aesthetic</span></h1>
+		<h2>A record of my journey</h2>
+		<p>Not sure exactly when, but some time ago I fell in love with Front-end Visual UI development.
+		It's a passion that has grown over the years and I've decided to share my journey with the world.</p>
+		<p>I'm fortunate to work in a company that has mulitple customer facing enterprise-level applications. </p>
+		<p>This website was an awesome experience to build; it had its challenging moments as it is the third or forth iteration.</p>
+		<h3>The technologies used:</h3>
+		<ul class="list-disc">
+			<li><strong>Astro</strong> - if you're at all interested in building websites you <i>must</i> look into the Astro web framework. <a href="https://astro.build/" target="_blank">Here  &rsaquo;</a> </li>
+			<li><strong>Design system</strong> - Open Props</li>
+			<li><strong>Componentry</strong> (is there such a word 🤣) - TailwindCSS and Flowbite</li>
+			<li>For more CSS fun - <strong>PostCSS</strong> with these plugins:
+				<ul class="mt-2">
+					<li><code>postcss-custom-media</code></li>
+					<li><code>postcss-nesting</code></li>
+					<li><code>postcss-preset-env</code> - for any cool new CSS feature not listed above</li>
+				</ul>
+			</li>
+			<li>And <strong>JavaScript</strong></li>
+		</ul>
+		<a href="/about/"><button class="btn-custom">More about me &rsaquo;</button></a>
 
 	</main>
 </Layout>

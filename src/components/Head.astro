@@ -1,7 +1,8 @@
 ---
 import ThemeSwitcher from "./ThemeSwitcher.astro";
+// import { ViewTransitions } from 'astro:transitions';
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -13,5 +14,12 @@ const { title } = Astro.props;
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,700&family=Karma:wght@400;700&family=Maitree:wght@300&display=swap"
+    rel="stylesheet"
+  />
   <ThemeSwitcher />
+  <!-- <ViewTransitions /> -->
 </head>

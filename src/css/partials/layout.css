@@ -4,9 +4,6 @@ html {
   --bg-dark-container: hsla(213, 9%, 23%, 1);
 }
 
-:--heading {
-  font-size: 5rem;
-}
 
 html.dark {
   background-color: var(--gray-9);
@@ -30,16 +27,13 @@ nav {
   grid-row: 3 / 4;
   background-image: url("../../pages/_img/hero-image.jpg");
 }
-.hero h1 {
-  --font-size-fluid-4: clamp(2rem, 4vw, 4rem);
-  font-size: var(--font-size-fluid-4);
-}
 
 .hero {
   & span {
     color: var(--gray-6);
   }
 }
+
 main {
   grid-row: 4 / 5;
   width: 100%;
@@ -55,6 +49,10 @@ main.contact {
 
 .dark .card {
   background-color: var(--bg-dark-container);
+}
+
+.dark code {
+  background-color: var(--gray-7);
 }
 
 footer {
