@@ -1,10 +1,10 @@
-@custom-selector :--heading h2, h3;
 @custom-selector :--font-heading h1;
 @custom-selector :--font-subhead h2, h3, h4, h5, h6;
 @custom-selector :--font-subhead-smaller h3, h4, h5, h6;
 @custom-selector :--font-bodyText p, ul, li, dd, dl;
 :--font-heading {
   margin-block: var(--size-3);
+  width: var(--size-content-3);
   font-family: 'Arvo', Georgia, serif;
   font-size: var(--font-size-fluid-3);
   line-height: var(--font-lineheight-00);
@@ -20,10 +20,10 @@
   font-size: var(--font-size-fluid-1);
 }
 :--font-bodyText {
-  margin-block-end: var(--size-2);
+  margin-block-end: var(--size-3);
   font-family: 'Maitree', Georgia, serif;
-  font-size: var(--font-size-fluid-0);
-  line-height: var(--font-lineheight-3);
+  font-size: var(--font-size-fluid-1);
+  line-height: var(--font-lineheight-2);
   font-weight: 300;
 }
 .hero h1 {
@@ -36,7 +36,7 @@ strong {
 }
 
 code {
-  font-size: var(--font-size-0);
+  font-size: var(--font-size-fluid-0);
 }
 
 
