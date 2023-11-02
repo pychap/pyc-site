@@ -31,6 +31,10 @@
   font-size: var(--font-size-fluid-4);
 }
 
+nav span {
+  font-family: 'Arvo', serif;
+}
+
 strong {
   font-weight: var(--font-weight-7);
 }
