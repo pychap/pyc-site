@@ -3,40 +3,44 @@
 @custom-selector :--font-subhead-smaller h3, h4, h5, h6;
 @custom-selector :--font-bodyText p, ul, li, dd, dl;
 :--font-heading {
-  margin-block: var(--size-3);
+  margin-block: var(--size-fluid-3);
   width: var(--size-content-3);
-  font-family: 'Arvo', Georgia, serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: var(--font-size-fluid-3);
   line-height: var(--font-lineheight-00);
+  font-weight: 900;
 }
 :--font-subhead {
-  margin-block-end: var(--size-2);
-  font-family: 'Karma', Georgia, serif;
+  margin-block-end: var(--size-fluid-2);
+  font-family: 'Alegreya Sans', sans-serif;
+  /* font-family: 'Karma', Georgia, serif; */
   font-size: var(--font-size-fluid-2);
 }
 :--font-subhead-smaller {
-  margin-block-end: var(--size-2);
-  font-family: 'Karma', Georgia, serif;
+  margin-block-end: var(--size-fluid-2);
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: var(--font-size-fluid-1);
 }
 :--font-bodyText {
-  margin-block-end: var(--size-3);
-  font-family: 'Maitree', Georgia, serif;
-  font-size: var(--font-size-fluid-1);
+  --font-size-fluid-1-5: clamp(1rem, 2vw, 1.35rem);
+  margin-block-end: var(--size-fluid-3);
+  font-family: 'Alegreya Sans', sans-serif;
+  /* font-family: 'Maitree', Georgia, serif; */
+  font-size: var(--font-size-fluid-1-5);
   line-height: var(--font-lineheight-2);
   font-weight: 300;
 }
 .hero h1 {
-  --font-size-fluid-4: clamp(3.8rem, 4vw, 5rem);
+  --font-size-fluid-4: clamp(5rem, 4vw, 3.5rem);
   font-size: var(--font-size-fluid-4);
 }
 
 nav span {
-  font-family: 'Arvo', serif;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
 strong {
-  font-weight: var(--font-weight-7);
+  font-weight: var(--font-weight-5);
 }
 
 code {

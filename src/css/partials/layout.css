@@ -4,6 +4,14 @@ html {
   --bg-dark-container: hsla(213, 9%, 23%, 1);
 }
 
+html,
+body,
+main,
+.hero,
+nav {
+  width: 100vw;
+  overflow-x: hidden;
+}
 
 html.dark {
   background-color: var(--gray-9);
@@ -40,6 +48,18 @@ main {
   height: 100%;
   margin: auto;
   padding: 1.5rem;
+
+  &.home {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--size-fluid-2);
+    justify-items: center;
+
+    & .container__home {
+      grid-column: 2 / 3;
+      width: max-content;
+    }
+  }
 }
 
 main.about,
@@ -51,6 +71,10 @@ main.contact {
   background-color: var(--bg-dark-container);
 }
 
+hr {
+  margin-block: var(--size-fluid-2);
+}
+
 .dark code {
   background-color: var(--gray-7);
 }
@@ -58,6 +82,12 @@ main.contact {
 footer {
   grid-row-start: 5;
   grid-row-end: 6;
+  & ul {
+    margin-bottom: 0;
+    & li {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .dark footer {
