@@ -7,8 +7,16 @@
 @media (--md-n-below) {
   .blog-post__grid {
     grid-template-columns: 1fr;
+  } 
+}
+
+@media (--md-n-above) {
+  nav ul {
+    margin-bottom: 0;
+    & li {
+      margin-bottom: 0;
+    }
   }
-    
 }
 
 @media (--lg-n-below) {

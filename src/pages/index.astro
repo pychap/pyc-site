@@ -1,19 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-// import { fade } from "astro:transitions";
+import { fade } from "astro:transitions";
 const title = 'Peter\'s website';
 ---
 
 <Layout title={title}>
 	<Hero />
-	<main>
-		<h1>Welcome to Front-end <span class="text-gradient">Aesthetic</span></h1>
-		<h2>A record of my journey</h2>
+	<main class="home" transition:animate={fade({ duration: "0.7s" })}>
+		<div class="container__home">
+		<h1><span class="text-gradient">Welcome</span></h1>
+		<h2>What a journey!</h2>
 		<p>Not sure exactly when, but some time ago I fell in love with Front-end Visual UI development.
-		It's a passion that has grown over the years and I feel like the world is my oyster 🦪.</p>
-		<p>I'm fortunate to work in a company that has mulitple complex enterprise-level applications. </p>
-		<p>This website was an awesome experience to build; it had its challenging moments as it is the third or forth iteration.</p>
+		It's a passion that has grown over the years and I feel like the web world is my oyster 🦪.</p>
+		<p>I'm fortunate to work in a company that has mulitple complex enterprise-level applicationsthat allow me to constantly stretch, learn new things. </p>
+		<a href="/about/"><button class="btn-custom mb-4">More about me &rsaquo;</button></a>
+		<hr />
+		<p>This website was an awesome experience to build; after multiple attempts, it feels great to get things off the ground.</p>
 		<h3>The technologies used:</h3>
 		<ul class="list-disc list-inside">
 			<li><strong>Astro</strong> - if you're at all interested in building websites you <i>must</i> look into the Astro web framework. <a href="https://astro.build/" target="_blank">Here  &rsaquo;</a> </li>
@@ -28,7 +31,6 @@ const title = 'Peter\'s website';
 			</li>
 			<li>And <strong>JavaScript</strong></li>
 		</ul>
-		<a href="/about/"><button class="btn-custom">More about me &rsaquo;</button></a>
-
+	</div>
 	</main>
 </Layout>
