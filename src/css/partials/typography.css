@@ -25,6 +25,11 @@
 @custom-selector :--font-subhead h2, h3, h4, h5, h6;
 @custom-selector :--font-subhead-smaller h3, h4, h5, h6;
 @custom-selector :--font-bodyText p, ul, li, dd, dl;
+
+:root {
+  --fluid-body-txt-18-32: clamp(1.125rem, 0.7273rem + 1.0vw, 2rem);
+}
+
 :--font-heading {
   margin-block: var(--size-fluid-3);
   width: var(--size-content-3);
@@ -48,7 +53,7 @@
   --font-size-fluid-1-5: clamp(1rem, 2vw, 1.35rem);
   margin-block-end: var(--size-fluid-3);
   font-family: 'Alegreya Sans 200n', sans-serif;
-  font-size: var(--font-size-fluid-1-5);
+  font-size: var(--fluid-body-txt-18-32);
   line-height: var(--font-lineheight-2);
   font-weight: 200;
 }
@@ -58,7 +63,8 @@
 }
 
 nav span {
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Alegreya Sans 900', sans-serif;
+  letter-spacing: var(--font-letterspacing-1);
 }
 
 strong {
