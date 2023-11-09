@@ -13,5 +13,29 @@ const pageTitle = "Contact me";
       reiciendis eius repudiandae, assumenda consequuntur eos optio. Veritatis
       culpa incidunt reiciendis provident.
     </p>
+    <form action="https://getform.io/f/15a33e77-b4f3-42d5-8266-e67316ecfd69" method="post">
+      <fieldset id="forms__input">
+        <legend>Reach out to me here</legend>
+        <div> 
+          <label for="required__input__name">Your name</label>
+          <input id="required__input__name" name="name" type="text" required placeholder="Your name">
+        </div>
+        <div>
+          <label for="input__emailaddress">Email Address</label>
+          <input id="input__emailaddress" type="email" name="email" placeholder="name@email.com" required autocomplete="email">
+        </div>
+        <div>
+          <label for="input__webaddress">Web Address</label>
+          <input id="input__webaddress" type="url" name="web-url" placeholder="https://yoursite.com" autocomplete="url">
+        </div>
+        <div>
+          <label for="input__phone">Phone Number</label>
+          <input id="input__phone" type="tel" name="phone-number" inputmode="numeric" placeholder="999-999-9999" minlength="7" maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+        <label for="textarea">Send me a message</label>
+        <textarea id="textarea" name="message" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+        <button class="btn-custom form" type="submit">Send</button>
+      </fieldset>    
+    </form>
   </main>
 </Layout>

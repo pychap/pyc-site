@@ -10,7 +10,7 @@ html,
 .hero,
 nav {
   width: 100%;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 footer {
@@ -81,6 +81,10 @@ main.contact {
   grid-row: 3 / 5;
 }
 
+.about, .blog, .contact {
+  grid-column: 2 / 3;
+}
+
 .dark .card {
   background-color: var(--bg-dark-container);
 }
@@ -109,22 +113,6 @@ footer {
   background-color: var(--bg-dark-container);
 }
 
-h1 {
-  font-size: var(--font-size-fluid-3);
-}
-
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6,
-.dark p,
-.dark ul,
-.dark li {
-  color: var(--gray-4);
-}
-
 button {
   padding-block: 0.75ch;
   padding-inline: var(--size-relative-6);
@@ -137,6 +125,7 @@ button.btn-custom {
   --_border: var(--indigo-6);
   --_text: var(--indigo-0);
   --_ink-shadow: 0 1px 0 var(--indigo-9);
+  background-image: var(--_bg);
 }
 
 .blog-post__grid {
