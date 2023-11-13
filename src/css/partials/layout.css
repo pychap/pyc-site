@@ -85,6 +85,10 @@ main.contact {
   grid-column: 2 / 3;
 }
 
+.blog {
+  grid-row: 2 / 4;
+}
+
 .dark .card {
   background-color: var(--bg-dark-container);
 }
