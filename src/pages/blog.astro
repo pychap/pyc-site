@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BlogPost from "../components/BlogPost.astro";
+import Card from "../components/Card.astro";
 
 const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = "Peter's Blog";
@@ -15,6 +16,7 @@ const pageTitle = "Peter's Blog";
       officia dolores aliquam earum, dignissimos beatae quos minus, quod
       laboriosam quia assumenda cum ex ea in ad molestiae.
     </p>
+    <Card href={'#'} title={'This is the title'} body={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate suscipit sunt numquam mollitia hic repellat, perspiciatis minima recusandae voluptas ipsum atque reiciendis natus porro laboriosam quo impedit ut maxime.'}  />
     <div class="blog-post__grid">
       {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} /> )}
     </div>

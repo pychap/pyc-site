@@ -1,3 +1,14 @@
+/* @link https://utopia.fyi/grid/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,8 */
+
+:root {
+  --grid-max-width: 77.5rem;
+  --grid-gutter: var(
+    --space-s-l,
+    clamp(1.125rem, 0.2788rem + 4.2308vw, 2.5rem)
+  );
+  --grid-columns: 12;
+}
+
 html {
   height: 100%;
   font-family: system-ui, sans-serif;
@@ -26,7 +37,9 @@ body {
   display: grid;
   place-items: center;
   grid-template-rows: repeat(2, auto) 1fr auto;
-  grid-template-columns: var(--size-8) calc(100% - 2 * var(--size-8)) var(--size-8);
+  grid-template-columns: var(--size-8) calc(100% - 2 * var(--size-8)) var(
+      --size-8
+    );
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -45,7 +58,7 @@ nav {
 
 .hero {
   grid-row: 3 / 4;
-  grid-column: 1 / -1;;
+  grid-column: 1 / -1;
   background-image: url("../../pages/_img/hero-image.jpg");
 }
 
@@ -64,16 +77,48 @@ main {
 
   &.home {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(var(--grid-columns),1fr);
+    grid-gap: var(--grid-gutter);
+    /* grid-template-columns: auto 1fr auto;
     gap: var(--size-fluid-2);
-    justify-items: center;
+    justify-items: center; */
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
 
     & .container__home {
-      grid-column: 1 / -1;
-      display: grid;
-      width: max-content;
+      /* grid-column: 1 / -1;
+      display: grid; */
+      /* display: grid;
+      gap: var(--grid-gutter);
+      width: 100%; */
     }
   }
+}
+
+section {
+  &.one {
+    grid-area: 1 / 4 / 2 / 11;
+  }
+  &.two {
+    grid-area: 3 / 4 / 4 / 11;
+  }
+  &.three {
+    grid-area: 5 / 4 / 6 / 11;
+  }
+}
+
+/* =========== from clearleft ============ */
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
 }
 
 main.about,
@@ -81,7 +126,9 @@ main.contact {
   grid-row: 3 / 5;
 }
 
-.about, .blog, .contact {
+.about,
+.blog,
+.contact {
   grid-column: 2 / 3;
 }
 
