@@ -128,7 +128,8 @@ main.contact {
 
 .about,
 .blog,
-.contact {
+.contact,
+.tags {
   grid-column: 2 / 3;
 }
 

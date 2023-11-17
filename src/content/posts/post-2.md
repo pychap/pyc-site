@@ -1,11 +1,10 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Astro Blog Post'
-pubDate: 2023-10-24
-description: 'This is the first post of my new Astro blog.'
+title: 'My Second Astro Blog Post'
 author: 'Peter Chapman'
+description: 'This is the second post of my new Astro blog.'
+pubDate: 2023-10-24
 image:
-    url: 'https://docs.astro.build/assets/rays.webp'
+    url: 'https://docs.astro.build/assets/arc.webp'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 ---
