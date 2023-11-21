@@ -13,6 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^3.0.1",
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.4.3",
     "flowbite": "^1.6.3",
@@ -26,6 +27,7 @@
     "postcss-custom-media": "^10.0.2",
     "postcss-import": "^15.1.0",
     "postcss-jit-props": "^1.0.14",
-    "postcss-preset-env": "^9.3.0"
+    "postcss-preset-env": "^9.3.0",
+    "typescript": "^5.2.2"
   }
 }
