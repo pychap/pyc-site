@@ -1,5 +1,5 @@
 ---
-
+// console.log(Astro.url);
 ---
 <nav class="bg-white border-gray-200 px- bg-white border-gray-200 px-2 sm:px-4 py-2.5">
   <div class="mx-auto flex flex-wrap items-center justify-between">
@@ -49,16 +49,24 @@
   <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-4">
     <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
       <li>
-        <a href="/" class="md:bg-transparent text-gray-700 block pl-3 pr-4 py-2 md:text-gray-700 md:p-0 rounded dark:text-white" aria-current="">Home</a>
+        <a href="/" class={Astro.url.pathname.split("/")[1] === ""
+        ? "active nav-link"
+        : "nav-link"} aria-current="">Home</a>
       </li>
       <li>
-        <a href="/about/" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <a href="/about/" class={Astro.url.pathname.split("/")[1] === "about"
+        ? "active nav-link"
+        : "nav-link"}>About</a>
       </li>
       <li>
-        <a href="/blog/" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+        <a href="/blog/" class={Astro.url.pathname.split("/")[1] === "blog"
+        ? "active nav-link"
+        : "nav-link"}>Blog</a>
       </li>
       <li>
-        <a href="/contact/" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        <a href="/contact/" class={Astro.url.pathname.split("/")[1] === "contact"
+        ? "active nav-link"
+        : "nav-link"}>Contact</a>
       </li>
     </ul>
   </div>

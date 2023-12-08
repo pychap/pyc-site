@@ -14,6 +14,7 @@
 @import "./partials/layout.css";
 @import "./partials/media-queries.css";
 
+@import "./partials/nav.css";
 @import "./partials/typography.css";
 @import "./partials/form.css";
 
