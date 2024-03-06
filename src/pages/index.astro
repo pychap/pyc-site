@@ -7,26 +7,19 @@ const title = "Peter's website";
 
 <Layout title={title}>
   <Hero />
-  <main class="home" transition:animate={fade({ duration: "0.7s" })}>
-    <!-- <div class="container__home"> -->
-      <section class="one">
+  <main class="content-grid home" transition:animate={fade({ duration: "0.7s" })}>
     <h1><span class="text-gradient">Welcome</span></h1>
-    <h2>My Journey</h2>
+    <h2>Website Architecture</h2>
     <p>
-      Not sure exactly when, but some time ago I fell in love with Front-end
-      Visual UI development. It's a passion that has grown over the years and I
-      feel like the web world is my oyster 🦪.
+      My first job, thanks to help from my dad, at age 14, was to help around an Architecture office. As a kid at that time I was interested in artistic, creative things. Then here were these people, architects, making a living doing this. About all I really did there beyond observing was to get in their way, and it didn't last long as a job&mdash;but just being there was profound for me.
     </p>
     <p>
-      I'm fortunate to work in a company that has mulitple complex
-      enterprise-level applications that allow me to constantly stretch, learn
-      new things.
+      I go into greater detail in the About page but suffice to say that this original desire has morphed into digital architecture, leading to creating websites.
     </p>
     <a href="/about/"><button class="btn-custom mb-4">More about me &rsaquo;</button></a>
-  </section>
 
-    <section class="two">
-      <p>
+    <section class="breakout py-4 rounded-md my-6">
+      <p class="m-0">
         <span class="p-text-gradient-23">
           This website was an awesome experience to build; after multiple
           attempts, it feels great to get things off the ground. I'm going to
@@ -34,7 +27,7 @@ const title = "Peter's website";
         </span>
       </p>
     </section>
-    <section class="three">
+    <section class="">
     <h3>The technologies used:</h3>
     <ul class="list-disc list-inside">
       <li>
