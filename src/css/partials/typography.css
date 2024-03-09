@@ -1,27 +1,31 @@
 @font-face {
-  font-family: 'Alegreya Sans 900';
-  src: url('../fonts/AlegreyaSans-Black.woff2'), format("woff2"), url('../fonts/AlegreyaSans-Black.ttf'), format("ttf");
+  font-family: "Alegreya Sans 900";
+  src: url("../fonts/AlegreyaSans-Black.woff2"), format("woff2"),
+    url("../fonts/AlegreyaSans-Black.ttf"), format("ttf");
   font-style: normal;
   font-display: swap;
   font-weight: 900;
 }
 @font-face {
-  font-family: 'Alegreya Sans 500';
-  src: url('../fonts/AlegreyaSans-Medium.woff2'), format("woff2"), url('../fonts/AlegreyaSans-Medium.ttf'), format("ttf");
+  font-family: "Alegreya Sans 500";
+  src: url("../fonts/AlegreyaSans-Medium.woff2"), format("woff2"),
+    url("../fonts/AlegreyaSans-Medium.ttf"), format("ttf");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Alegreya Sans 200n';
-  src: url('../fonts/AlegreyaSans-Light.woff2'), format("woff2"), url('../fonts/AlegreyaSans-Light.ttf'), format("ttf");
+  font-family: "Alegreya Sans 200n";
+  src: url("../fonts/AlegreyaSans-Light.woff2"), format("woff2"),
+    url("../fonts/AlegreyaSans-Light.ttf"), format("ttf");
   font-display: swap;
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
-  font-family: 'Alegreya Sans 200i';
-  src: url('../fonts/AlegreyaSans-LightItalic.woff2'), format("woff2"), url('../fonts/AlegreyaSans-LightItalic.ttf'), format("ttf");
+  font-family: "Alegreya Sans 200i";
+  src: url("../fonts/AlegreyaSans-LightItalic.woff2"), format("woff2"),
+    url("../fonts/AlegreyaSans-LightItalic.ttf"), format("ttf");
   font-display: swap;
   font-style: italic;
   font-weight: 200;
@@ -34,31 +38,40 @@
 @custom-selector :--font-bodyTextItalic i;
 
 :root {
-  --fluid-body-txt-18-32: clamp(1.125rem, 0.7273rem + 1.0vw, 2rem);
+  --fluid-body-txt-18-32: clamp(1.125rem, 0.7273rem + 1vw, 2rem);
+  --fs-2xs: clamp(0.64rem, 0.6552rem + -0.0196vw, 0.6513rem);
+  --fs-xs: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --fs-sm: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --fs-base: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-md: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --fs-lg: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --fs-xl: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
+  --fs-2xl: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
+  --fs-3xl: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
 }
 
 :--font-heading {
   margin-block: var(--size-fluid-3);
   width: var(--size-content-3);
-  font-family: 'Alegreya Sans 900', sans-serif;
+  font-family: "Alegreya Sans 900", sans-serif;
   font-size: var(--font-size-fluid-3);
   line-height: var(--font-lineheight-00);
   font-weight: 900;
 }
 :--font-subhead {
   margin-block-end: var(--size-fluid-2);
-  font-family: 'Alegreya Sans 500', sans-serif;
+  font-family: "Alegreya Sans 500", sans-serif;
   font-size: var(--font-size-fluid-2);
 }
 :--font-subhead-smaller {
   margin-block-end: var(--size-fluid-2);
-  font-family: 'Alegreya Sans 500', sans-serif;
+  font-family: "Alegreya Sans 500", sans-serif;
   font-size: var(--font-size-fluid-1);
 }
 :--font-bodyText {
   --font-size-fluid-1-5: clamp(1rem, 2vw, 1.35rem);
   margin-block-end: var(--size-fluid-3);
-  font-family: 'Alegreya Sans 200n', sans-serif;
+  font-family: "Alegreya Sans 200n", sans-serif;
   font-size: var(--fluid-body-txt-18-32);
   line-height: var(--font-lineheight-2);
   font-weight: 200;
@@ -66,7 +79,7 @@
 :--font-bodyTextItalic {
   --font-size-fluid-1-5: clamp(1rem, 2vw, 1.35rem);
   margin-block-end: var(--size-fluid-3);
-  font-family: 'Alegreya Sans 200i', sans-serif;
+  font-family: "Alegreya Sans 200i", sans-serif;
   font-size: var(--fluid-body-txt-18-32);
   line-height: var(--font-lineheight-2);
   font-weight: 200;
@@ -81,12 +94,12 @@
 }
 
 nav span {
-  font-family: 'Alegreya Sans 900', sans-serif;
+  font-family: "Alegreya Sans 900", sans-serif;
   letter-spacing: var(--font-letterspacing-1);
 }
 
 strong {
-  font-family: 'Alegreya Sans 500', sans-serif;
+  font-family: "Alegreya Sans 500", sans-serif;
   font-weight: var(--font-weight-5);
 }
 
@@ -108,8 +121,7 @@ h1 {
 .dark ul,
 .dark li,
 .dark label,
-.dark legend
- {
+.dark legend {
   color: var(--gray-4);
 }
 
