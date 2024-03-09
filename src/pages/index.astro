@@ -2,16 +2,28 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import { fade } from "astro:transitions";
+import Heading from "../components/Heading.astro";
+import { Image } from "astro:assets";
 const title = "Peter's website";
+import peter from "../assets/avatar.jpg";
 ---
 
 <Layout title={title}>
   <Hero />
   <main class="content-grid home" transition:animate={fade({ duration: "0.7s" })}>
-    <h1><span class="text-gradient">Welcome</span></h1>
-    <h2>Website Architecture</h2>
+    <div class="flex items-center">
+      <Image 
+        src={peter}
+        alt="Peter's avatar"
+        class="rounded-full w-12 h-12"
+        format="webp"
+      />
+      <h1 class="ml-4"><span class="text-gradient">Welcome</span></h1>
+    
+    </div>
+    <Heading tagName="h2" size="h2">Websites &amp; Architecture</Heading>
     <p>
-      My first job, thanks to help from my dad, at age 14, was to help around an Architecture office. As a kid at that time I was interested in artistic, creative things. Then here were these people, architects, making a living doing this. About all I really did there beyond observing was to get in their way, and it didn't last long as a job&mdash;but just being there was profound for me.
+      My first job was at age 14 (thanks to help from my dad), I helped around an Architecture office. As a kid at that time I was interested in artistic, creative things. Then here were these people, architects, making a living doing this. About all I really did there beyond observing was to get in their way. And it didn't last long as a job&mdash;but just being there was profound for me.
     </p>
     <p>
       I go into greater detail in the About page but suffice to say that this original desire has morphed into digital architecture, leading to creating websites.
@@ -34,8 +46,7 @@ const title = "Peter's website";
         <strong>Astro</strong> - if you're at all interested in building
         websites you <i>must</i> look into the Astro web framework. <a
           href="https://astro.build/"
-          target="_blank">Here &rsaquo;</a
-        >
+          target="_blank">Here &rsaquo;</a>
       </li>
       <li><strong>Design system</strong> - Open Props</li>
       <li>
@@ -56,6 +67,5 @@ const title = "Peter's website";
       <li>And <strong>JavaScript</strong></li>
     </ul>
   </section>
-    <!-- </div> -->
   </main>
 </Layout>
