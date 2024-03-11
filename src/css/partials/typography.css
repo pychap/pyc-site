@@ -93,6 +93,10 @@
   font-size: var(--font-size-fluid-4);
 }
 
+.features h2 {
+  justify-self: center;
+}
+
 nav span {
   font-family: "Alegreya Sans 900", sans-serif;
   letter-spacing: var(--font-letterspacing-1);

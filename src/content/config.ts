@@ -16,6 +16,16 @@ const postsCollection = defineCollection({
     })
 });
 // Export a single `collections` object to register your collection(s)
+const features = defineCollection({
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    icon: z.string().refine((val) => val.startsWith("icon"))
+  })
+});
+
 export const collections = {
   posts: postsCollection,
+  features,
 };

@@ -1,0 +1,71 @@
+---
+import { getCollection } from "astro:content";
+import Heading from "./Heading.astro";
+import { Icon } from "astro-icon/components";
+
+const features = await getCollection("features");
+
+---
+
+<section class="full-width features" aria-label="Features banner">
+  <div>
+    <Heading tagName="h2" size="h2">
+      I build websites that impress.
+    </Heading>
+    <ul>
+      {
+        features.map(({ data }) => (
+          <li>
+            <Icon name={data.icon} size={64} />
+            <Heading tagName="h3" size="h3">
+              {data.title}
+            </Heading>
+            <p>{data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .features div {
+  padding-block: var(--space-xl);
+  padding-inline: var(--space-md);
+  align-self: start;
+  gap: var(--space-md);
+  text-align: center;
+  color: var(--color-bkg);
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+}
+
+.features div ul {
+  gap: var(--space-sm);
+  -o-flex-wrap: wrap;
+  -o-justify-content: center;
+  -moz-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.features div ul li {
+  text-align: center;
+  -o-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -o-align-items: center;
+  place-items: center;
+  gap: var(--space-sm);
+  max-width: 30ch;
+  display: grid;
+}
+</style>
