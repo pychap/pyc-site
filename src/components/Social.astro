@@ -1,14 +1,21 @@
 ---
+import { Icon } from 'astro-icon/components';
 const { platform, username } = Astro.props;
+console.log(platform);
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<a href={`https://www.${platform}.com/${username}`} class="social">
+  <Icon name=`icon--${platform}` />
+  <!-- {platform} -->
+</a>
 
 <style>
   a {
     padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
+    color:  var(--gray-6);
     text-decoration: none;
+  }
+  .dark .social {
+    color: var(--gray-4);
   }
 </style>

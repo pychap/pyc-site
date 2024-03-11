@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import { fade } from "astro:transitions";
 import Heading from "../components/Heading.astro";
+import FeaturesBanner from "../components/FeaturesBanner.astro";
+import { fade } from "astro:transitions";
 import { Image } from "astro:assets";
 const title = "Peter's website";
 import peter from "../assets/avatar.jpg";
@@ -30,15 +31,7 @@ import peter from "../assets/avatar.jpg";
     </p>
     <a href="/about/"><button class="btn-custom mb-4">More about me &rsaquo;</button></a>
 
-    <section class="breakout py-4 rounded-md my-6">
-      <p class="m-0">
-        <span class="p-text-gradient-23">
-          This website was an awesome experience to build; after multiple
-          attempts, it feels great to get things off the ground. I'm going to
-          write a blog post about it soon so keep checking back!
-        </span>
-      </p>
-    </section>
+    <FeaturesBanner />
     <section class="">
     <h3>The technologies used:</h3>
     <ul class="list-disc list-inside">
