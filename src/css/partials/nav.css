@@ -6,10 +6,6 @@
   color: var(--white) !important;
 }
 
-.footer-link {
-  @apply mr-4 md:mr-6
-}
-
 nav, footer li {
   & a:is(:link, :active, :visited).active {
     color: var(--gray-9);

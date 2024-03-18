@@ -13,9 +13,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "^3.0.1",
-    "@astrojs/tailwind": "^5.0.4",
-    "astro": "^4.0.7",
+    "@astrojs/preact": "^3.1.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.1",
     "astro-icon": "^1.1.0",
     "flowbite": "^1.6.3",
     "open-props": "^1.6.10",

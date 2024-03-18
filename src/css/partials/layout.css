@@ -1,6 +1,21 @@
 :root {
   --accent: 124, 58, 237;
-  --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--accent)),
+    #da62c4 30%,
+    white 60%
+  );
+  --space-4xs: clamp(0.1875rem, 0.1875rem + 0vw, 0.1875rem);
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.625rem, 0.6033rem + 0.1087vw, 0.6875rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-sm: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-md: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+  --space-lg: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
 }
 
 html {
@@ -31,8 +46,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-nav {
-}
 
 .dark nav {
   background-color: var(--bg-dark-container);
@@ -120,6 +133,11 @@ hr {
 
 footer {
   width: 100%;
+  display: grid;
+  grid-template-columns: [footer-start] 1fr [footer-end];
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
   & ul {
     margin-bottom: 0;
     & li {
@@ -128,8 +146,53 @@ footer {
   }
 }
 
+.nav--footer {
+  grid-column-start: footer-start !important;
+  grid-column-end: footer-end !important;
+  grid-row: 1 / 2;
+  justify-self: center;
+}
+
+.nav--footer li {
+  padding-inline: 1rem;
+}
+
+.social {
+  grid-column-start: footer-start !important;
+  grid-column-end: footer-end !important;
+  grid-row: 2 / 3;
+  justify-self: center;
+}
+
+.legal {
+  grid-column-start: footer-start !important;
+  grid-column-end: footer-end !important;
+  grid-row: 3 / 4;
+  justify-self: center;
+}
+
 .dark footer {
   background-color: var(--bg-dark-container);
+
+}
+.dark footer a.active, .dark footer a.active:visited {
+  color: var(--white);
+}
+
+ul.social {
+  display: flex;
+  width: 50%;
+  max-width: 320px;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  padding: 0.5rem;
+  color: var(--gray-6);
+  text-decoration: none;
+}
+.dark .social {
+  color: var(--gray-4);
 }
 
 button {
