@@ -1,21 +1,17 @@
 ---
-import { Icon } from 'astro-icon/components';
-const { platform, username } = Astro.props;
-console.log(platform);
+import { Icon } from "astro-icon/components";
+import { socialData } from "@/data/siteData";
 ---
 
-<a href={`https://www.${platform}.com/${username}`} class="social">
-  <Icon name=`icon--${platform}` />
-  <!-- {platform} -->
-</a>
+<ul class="social">
+  {
+    socialData.map(({ href, icon, title }) => (
+      <li>
+        <a href={href} aria-title={title} title={title} target="_blank">
+          <Icon name={icon} size={20} />
+          </a>
+      </li>
+    ))
+  }
+</ul>
 
-<style>
-  a {
-    padding: 0.5rem 1rem;
-    color:  var(--gray-6);
-    text-decoration: none;
-  }
-  .dark .social {
-    color: var(--gray-4);
-  }
-</style>

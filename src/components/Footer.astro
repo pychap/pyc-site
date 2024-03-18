@@ -1,18 +1,12 @@
 ---
-import Social from "./Social.astro";
+import Social from "@/components/Social.astro";
 const today = new Date();
-const twitter = "twitter";
-const username = "pychap";
 ---
 
-<footer class="full-width bg-white shadow">
-  <div class="w-full mx-auto max-w-screen-xl p-6 md:flex md:items-center md:justify-between">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {today.getFullYear()} PY&E Inc.™. All Rights Reserved.
-  </span>
-  <Social platform={twitter} username={username} />
-  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-      <li>
-          <a href="/" class={Astro.url.pathname.split("/")[1] === ""
+<footer class="full-width bg-white shadow px-4">
+      <ul class="nav--footer flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+          <li>
+              <a href="/" class={Astro.url.pathname.split("/")[1] === ""
           ? "active footer-link"
           : "footer-link"}>Home</a>
       </li>
@@ -31,6 +25,7 @@ const username = "pychap";
           ? "active footer-link"
           : "footer-link"}>Contact</a>
       </li>
-  </ul>
-  </div>
+    </ul>
+    <Social />
+    <p class="legal text-sm text-gray-500 sm:text-center dark:text-gray-400">© {today.getFullYear()} PY&E Inc.™. All Rights Reserved.</p>
 </footer>
