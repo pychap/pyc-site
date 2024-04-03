@@ -17,8 +17,10 @@
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.5.1",
     "astro-icon": "^1.1.0",
+    "astro-purgecss": "^4.1.0",
     "flowbite": "^1.6.3",
     "open-props": "^1.6.10",
+    "purgecss": "^5.0.0",
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {

@@ -17,11 +17,10 @@ const pageTitle = "Peter's Blog";
       officia dolores aliquam earum, dignissimos beatae quos minus, quod
       laboriosam quia assumenda cum ex ea in ad molestiae.
     </p>
-    <Card href={'#'} title={'This is the title'} body={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate suscipit sunt numquam mollitia hic repellat, perspiciatis minima recusandae voluptas ipsum atque reiciendis natus porro laboriosam quo impedit ut maxime.'}  />
     <div class="blog-post__grid">
       {
         allPosts.map((post) => (
-          <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+          <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} description={post.data.description} author={post.data.author} />
         ))
       }
     </div>
