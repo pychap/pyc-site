@@ -3,10 +3,10 @@ title: 'My Second Astro Blog Post'
 author: 'Peter Chapman'
 description: 'This is the second post of my new Astro blog.'
 pubDate: 2023-10-24
-image:
-    url: 'https://docs.astro.build/assets/arc.webp'
-    alt: 'The full Astro logo.'
+image: '/src/content/posts/images/five-quick-javascript-project-ideas.jpg'
+    # alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
+isDraft: false
 ---
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
