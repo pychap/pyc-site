@@ -3,9 +3,9 @@ title: 'The Power of Astro '
 author: 'Peter Chapman'
 description: 'This is the first post of my new Astro blog.'
 pubDate: 2023-10-24
-image: 
-  url: '/src/content/posts/images/how-to-stop-worrying-about-keeping-up.jpg'
-  alt: 'Blogs image'
+image: '/src/content/posts/images/how-to-stop-worrying-about-keeping-up.jpg'
+  # alt: 'Blogs image'
+isDraft: false
 tags: ["astro", "blogging", "learning in public"]
 ---
 Welcome to my _new blog_. Here, I will share my learning journey as I build a new website.

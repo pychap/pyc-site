@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import BlogPost from "../components/BlogPost.astro";
-import Card from "../components/Card.astro";
+import PostCard from "@/components/ui/PostCard.astro";
 
 const allPosts = await getCollection("posts");
 const pageTitle = "Peter's Blog";
@@ -20,7 +19,8 @@ const pageTitle = "Peter's Blog";
     <div class="blog-post__grid">
       {
         allPosts.map((post) => (
-          <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} description={post.data.description} author={post.data.author} />
+          <PostCard url={`/posts/${post.slug}/`} title={post.data.title} description={post.data.description} author={post.data.author} />
+          // <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} description={post.data.description} author={post.data.author} />
         ))
       }
     </div>

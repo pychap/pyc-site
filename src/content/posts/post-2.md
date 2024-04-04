@@ -3,16 +3,16 @@ title: 'My Second Astro Blog Post'
 author: 'Peter Chapman'
 description: 'This is the second post of my new Astro blog.'
 pubDate: 2023-10-24
-image:
-    url: 'https://docs.astro.build/assets/arc.webp'
-    alt: 'The full Astro logo.'
+image: '/src/content/posts/images/five-quick-javascript-project-ideas.jpg'
+    # alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
+isDraft: false
 ---
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I've accomplished
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+1. **Installing Astro**: 1st, I created a new Astro project and set up my online accounts.
 
 2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
 

@@ -1,9 +1,9 @@
 ---
-import { Image } from 'astro:assets';
 import { type CollectionEntry } from 'astro:content';
 import Link from './Link.astro';
 import Heading from './Heading.astro';
-import FormattedDate from './FormattedDate.astro';
+import FormattedDate from '@ui/FormattedDate.astro';
+import Image from 'astro/components/Image.astro';
 
 type Props = {
   post: CollectionEntry<'posts'>
@@ -13,9 +13,9 @@ const { post } = Astro.props;
 const { title, description, image, pubDate } = post.data;
 ---
 
-<article class="post-card">
+<article class="post-card card">
   <div>
-    <Image src={image} alt={title} width={300} height={200} format="avif" />
+    <Image src={image} width={300} height={200} format="avif" alt={title} />
     <div class="content">
       <div class="rows">
         <div>
