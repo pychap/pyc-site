@@ -13,20 +13,57 @@ const { post } = Astro.props;
 const { title, description, image, pubDate } = post.data;
 ---
 
-<article class="post-card card">
-  <div>
-    <Image src={image} width={300} height={200} format="avif" alt={title} />
-    <div class="content">
-      <div class="rows">
-        <div>
-          <Heading tagName='h3' size='h4'>
-            <a href={`/blog/${post.slug}/`}>{title}</a>
-          </Heading>
-          <FormattedDate pubDate={pubDate} />
+<article class="card card-grid">
+    <div>
+      <Image src={image} format="avif" alt={title} />
+      <div class="content">
+        <div class="rows">
+          <div>
+            <Heading tagName='h3' size='h4'>
+              <a href={`/blog/${post.slug}/`}>{title}</a>
+            </Heading>
+            <FormattedDate pubDate={pubDate} />
+          </div>
+          <p>{description}</p>
+          <Link href={`/blog/${post.slug}/`}>Read post</Link>
         </div>
-        <p>{description}</p>
-        <Link href={`/blog/${post.slug}/`}>Read post</Link>
       </div>
     </div>
-  </div>
 </article>
+
+<style>
+  .card {
+    width: fit-content;
+    background-color: var(--color-base);
+    box-shadow: var(--shadow-5);
+    border-radius: var(--radius-3);
+    border: var(--border-size-1) solid var(--gray-3);
+    -o-align-self: flex-start;
+    -ms-flex-item-align: start;
+    -webkit-align-self: flex-start;
+    -o-align-self: flex-start;
+    align-self: flex-start;
+  }
+
+  .card > div {
+    display: grid;
+    place-items: center;
+    gap: var(--size-2);
+    text-align: center;
+}
+  .card > div > img {
+    object-fit: cover;
+    border-top-right-radius: var(--radius-3);
+    border-top-left-radius: var(--radius-3);
+  }
+
+  .card > div > .content {
+    display: grid;
+    gap: var(--space-2xs);
+    padding: var(--space-2xs) var(--space-sm) var(--space-md);
+}
+.card > div > .content p {
+  max-width: 29ch;
+}
+  
+</style>

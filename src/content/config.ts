@@ -27,6 +27,7 @@ const posts = defineCollection({
       }),
       pubDate: z.date(),
       isDraft: z.boolean().optional(),
+      tags: z.array(z.string()).optional(),
     }),
 });
 
@@ -43,4 +44,5 @@ const features = defineCollection({
 export const collections = {
   posts,
   features,
+  postsCollection
 };
