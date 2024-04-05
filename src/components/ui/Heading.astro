@@ -8,26 +8,42 @@ const headingOptions = {
   h6: "xs",
 };
 
+const alignmentOptions = {
+  left: "text-left",
+  center: "text-center",
+  right: "text-right",
+};
+
 type Props = {
   tagName: keyof typeof headingOptions;
   size: keyof typeof headingOptions;
+  align: keyof typeof alignmentOptions;
 };
 
-const { tagName, size } = Astro.props;
+const { tagName, size, align } = Astro.props;
 const Tag = tagName;
 ---
 
-<Tag class:list={["default", headingOptions[size]]}>
+<Tag class:list={["default", headingOptions[size], alignmentOptions[align]]}>
   <slot />
 </Tag>
 
 <style>
+  .text-left {
+    text-align: left;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
   .default {
     line-height: 1.3;
   }
 
   .xxl {
-    font-size: var(--fs-2xl);
+    font-size: var(--font-size-fluid-3);
   }
   .xl {
     font-size: var(--fs-xl);

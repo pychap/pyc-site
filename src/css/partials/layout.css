@@ -118,6 +118,16 @@ main {
   grid-template-columns: inherit;
   background-color: var(--gray-3);
 }
+
+.rows {
+  place-items: center;
+  gap: var(--space-sm);
+  display: grid;
+}
+
+.dark .features {
+  background-color: var(--gray-7);
+}
 .dark .card {
   background-color: var(--bg-dark-container);
 }
