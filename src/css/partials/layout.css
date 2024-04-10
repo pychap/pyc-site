@@ -51,6 +51,10 @@ body {
   background-color: var(--bg-dark-container);
 }
 
+.dark time {
+  color: var(--gray-5);
+}
+
 .hero {
   background-image: url("../../pages/_img/hero-image.jpg");
 }
@@ -72,6 +76,7 @@ main {
 
   &.home {
     margin-inline: auto;
+    place-items: center;
 
     & .container__home {
     }
@@ -128,8 +133,24 @@ main {
 .dark .features {
   background-color: var(--gray-7);
 }
+
+.dark .technologies {
+  background-color: var(--gray-9);
+}
 .dark .card {
   background-color: var(--bg-dark-container);
+}
+
+.avatar {
+  border: var(--border-size-3) solid var(--purple-5);
+  border-radius: var(--radius-round);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark .avatar {
+  border: var(--border-size-3) solid var(--purple-9);
 }
 
 img.full-width {
