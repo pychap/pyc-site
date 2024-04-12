@@ -1,17 +1,18 @@
 ---
-import FormattedDate from "../../components/ui/FormattedDate.astro";
-import Heading from "../../components/ui/Heading.astro";
-import Layout from "../../layouts/Layout.astro";
+import FormattedDate from "@/components/ui/FormattedDate.astro";
+import Heading from "@/components/ui/Heading.astro";
+
 import type { GetStaticPaths } from "astro";
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import me from "@/assets/avatar.jpg";
-import Image from "astro/components/Image.astro";
+import Layout from "@/layouts/Layout.astro";
 
 export const getStaticPaths = (async () => {
   const allPosts = await getCollection("posts", ({ data }) => !data.isDraft);
   return allPosts.map((p) => ({
-    params: { 
+    params: {
       slug: p.slug,
     },
     props: {
@@ -21,19 +22,22 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 type Props = {
-  post: CollectionEntry<'posts'>;
-}
+  post: CollectionEntry<"posts">;
+};
 const { post } = Astro.props;
+
 const { Content } = await post.render();
-const { title, description, image, pubDate } = post.data;
+
+// image pulled out of destructured below
+const { title, pubDate, description } = post.data;
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title}>
   <main class="content-grid blog-post">
     <section class="post-metadata">
       <header>
         <FormattedDate pubDate={pubDate} />
-        <Heading tagName="h1" size="h2">{title}</Heading>
+        <Heading tagName="h1" size="h2" align="left">{title}</Heading>
         <p>{description}</p>
       </header>
     </section>
@@ -43,7 +47,7 @@ const { title, description, image, pubDate } = post.data;
     <section class="author-metadata" aria-label="Author Metadata">
       <div>
         <Image src={me} width={140} height={140} format="avif" alt="Profile image for Peter Chapman" />
-        <Heading tagName="h2" size="h3">About me ›</Heading>
+        <Heading tagName="h2" size="h3" align="left">About me ›</Heading>
         <p>I am a web developer with years of experience in Frontend development.</p>
       </div>
     </section>

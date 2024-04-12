@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "watch:css": "postcss src/css/styles.css -o dist/css/styles.css -w",
     "build:css": "postcss src/css/styles.css -o dist/css/styles.css",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.10",
     "@astrojs/netlify": "^5.2.0",
     "@astrojs/preact": "^3.1.1",
     "@astrojs/sitemap": "^3.1.2",
@@ -33,6 +34,6 @@
     "postcss-import": "^15.1.0",
     "postcss-jit-props": "^1.0.14",
     "postcss-preset-env": "^9.3.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.5"
   }
 }
