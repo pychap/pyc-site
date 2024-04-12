@@ -10,6 +10,7 @@ type Props = {
 }
 
 const { post } = Astro.props;
+const { href } = Astro.params;
 const { title, description, image, pubDate } = post.data;
 ---
 
@@ -19,7 +20,7 @@ const { title, description, image, pubDate } = post.data;
       <div class="content">
         <div class="rows">
           <div>
-            <Heading tagName='h3' size='h4'>
+            <Heading tagName='h3' size='h4' align="center">
               <a href={`/blog/${post.slug}/`}>{title}</a>
             </Heading>
             <FormattedDate pubDate={pubDate} />

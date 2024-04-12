@@ -9,7 +9,7 @@ const features = await getCollection("features");
 
 <section class="full-width features" aria-label="Features banner">
   <div>
-    <Heading tagName="h2" size="h2">
+    <Heading tagName="h2" size="h2" align="center">
       I build websites that impress.
     </Heading>
     <ul>
@@ -17,7 +17,7 @@ const features = await getCollection("features");
         features.map(({ data }) => (
           <li>
             <Icon name={data.icon} size={64} />
-            <Heading tagName="h3" size="h3">
+            <Heading tagName="h3" size="h3" align="center">
               {data.title}
             </Heading>
             <p>{data.description}</p>
