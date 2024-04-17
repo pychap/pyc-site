@@ -1,0 +1,60 @@
+---
+import Heading from "./Heading.astro";
+import { techData } from "@/data/siteData";
+import { innerTechData } from "@/data/siteData";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="full-width technologies">
+  <Heading tagName="h2" size="h2" align="center"
+    >Technologies Used In Building &amp; Publishing This Site</Heading
+  >
+  <ul class="web-powers list-none">
+    {
+      techData.map(({ title, icon }) => (
+        <li>
+          <Icon name={icon} size={55} />
+          <Heading tagName="h3" size="h3" align="center">
+            {title}
+          </Heading>
+        </li>
+      ))
+    }
+  </ul>
+  <Heading tagName="h2" size="h2" align="center"
+    >CSS Tech Used Building This Site</Heading
+  >
+
+  <ul class="mt-2 web-powers list-none">
+    {
+      innerTechData.map(({ title, href, icon }) => (
+        <li>
+          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={title}>
+            <Icon name={icon} size={55} />
+          </a>
+          <Heading tagName="h3" size="h3" align="center">
+            {title}
+          </Heading>
+        </li>
+      ))
+    }
+  </ul>
+  <ul class="mt-2 web-powers list-none">
+    <li><strong>Design system</strong>OpenProps &amp; Tailwind</li>
+  </ul>
+</section>
+
+<style>
+  .technologies {
+    place-items: center;
+    padding-top: var(--space-lg);
+  }
+
+  .web-powers li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--space-md);
+    place-items: center;
+  }
+</style>

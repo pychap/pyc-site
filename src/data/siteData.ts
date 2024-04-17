@@ -30,3 +30,44 @@ export const socialData = [
     icon: "icon--instagram",
   },
 ];
+
+export const techData = [
+  {
+    title: "Astro",
+    icon: "icon--astro",
+  },
+  {
+    title: "HTML5",
+    icon: "icon--html",
+  },
+  {
+    title: "CSS",
+    icon: "icon--css",
+  },
+  {
+    title: "JavaScript",
+    icon: "icon--javascript",
+  },
+  {
+    title: "Netlify",
+    icon: "icon--netlify",
+  }
+];
+
+export const innerTechData = [
+  {
+    title: "OpenProps",
+    href: "https://open-props.style/",
+    icon: "icon--openprops",
+  },
+  {
+    title: "Tailwind",
+    href: "https://tailwindcss.com/",
+    icon: "icon--tailwind",
+  },
+  {
+    title: "PostCSS",
+    href: "https://postcss.org/",
+    icon: "icon--postcss",
+  },
+]
