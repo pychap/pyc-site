@@ -134,8 +134,16 @@ main {
   background-color: var(--gray-7);
 }
 
+.content-grid > .technologies {
+  background-color: transparent;
+}
+
 .dark .technologies {
   background-color: var(--gray-9);
+}
+
+.web-powers li h3.default {
+  margin-bottom: 0;
 }
 .dark .card {
   background-color: var(--bg-dark-container);

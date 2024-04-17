@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
-import purgecss from "astro-purgecss";
 
 import sitemap from "@astrojs/sitemap";
 
@@ -12,7 +11,7 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   prefetch: true,
   site: "https://py-chapman.netlify.app/",
-  integrations: [tailwind(), icon(), purgecss(), sitemap()],
+  integrations: [tailwind(), icon(), sitemap()],
   output: "hybrid",
   adapter: netlify()
 });

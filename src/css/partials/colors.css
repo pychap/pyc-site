@@ -1,3 +1,13 @@
 :root {
   --white: hsla(0, 0%, 100%, 1);
 }
+
+.op-icon-p {
+  stroke: var(--indigo-2);
+  stroke-width: 25px;
+}
+
+.op-icon-o {
+  stroke: var(--indigo-4);
+  stroke-width: 25px;
+}

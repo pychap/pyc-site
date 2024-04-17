@@ -7,6 +7,7 @@ import { fade } from "astro:transitions";
 import { Image } from "astro:assets";
 const title = "Peter's website";
 import peter from "../assets/avatar.jpg";
+import Technologies from "@/components/ui/Technologies.astro";
 ---
 
 <Layout title={title}>
@@ -24,61 +25,20 @@ import peter from "../assets/avatar.jpg";
       />
       <h1 class="ml-4"><span class="text-gradient">Welcome</span></h1>
     </div>
-    <Heading tagName="h2" size="h2" align="left">Websites &amp; Architecture</Heading>
-    <p>
-      My first job was at age 14 (thanks to help from my dad), in which I helped around
-      an Architecture office. As a kid at that time I was interested in
-      artistic, creative things. Then here were these people, architects, making
-      a living doing this. About all I really did there beyond observing was to
-      get in their way. And it didn't last long as a job&mdash;but just being
-      there was profound for me.
-    </p>
-    <p>
-      I go into greater detail in the About page but suffice to say that this
-      original desire has morphed into digital architecture, leading to creating
-      websites.
-    </p>
-    <a href="/about/"
-      ><button class="btn-custom mb-4">More about me &rsaquo;</button></a
-    >
-
+    <Heading tagName="h2" size="h2" align="left">The Power of the Internet</Heading>
+    <p>Do you need a website? Does your website need a refreshed look? Do you need a part of you site worked on, perhaps images redone or content changed? Perhaps one page or section is confused, not cohesive?</p>
+    <p>I can take your business thoughts and ideas for a greater online presence and turn them into reality.</p>
+    <p>I have years of experience in building web pages, applications and websites for internal and external clients. If you'd like to &ldquo;cut to the chase&rdquo; and contact me, click the button below, and I'll get back to you as soon as possible. Or if you want to browse around feel free!</p>
+    <div class="buttons__multiple">
+      <a href="/contact/"
+        ><button class="btn-custom mb-4">Contact me &rsaquo;</button></a
+      >
+      <a href="/about/"
+        ><button class="btn-custom mb-4">About me &rsaquo;</button></a
+      >
+    </div>
     <FeaturesBanner />
-    <section class="full-width technologies">
-      <Heading tagName="h2" size="h2" align="center">Technologies</Heading>
-      <ul class="list-disc list-inside">
-        <li>
-          <strong>Astro</strong> - if you're at all interested in building websites
-          you <i>must</i> look into the Astro web framework. <a
-            href="https://astro.build/"
-            target="_blank">Here &rsaquo;</a
-          >
-        </li>
-        <li><strong>Design system</strong> - Open Props</li>
-        <li>
-          <strong>Componentry</strong> (is there such a word 🤣) - TailwindCSS and
-          Flowbite
-        </li>
-        <li>
-          For more CSS fun - <strong>PostCSS</strong> with these plugins:
-          <ul class="mt-2">
-            <li><code>postcss-custom-media</code></li>
-            <li><code>postcss-nesting</code></li>
-            <li>
-              <code>postcss-preset-env</code> - for any cool new CSS feature not
-              listed above
-            </li>
-            <li><strong>JavaScript</strong></li>
-            <li><strong>Netlify</strong> for hosting</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+    <Technologies />
+
   </main>
 </Layout>
-
-<style>
-  .technologies {
-    place-items: center;
-    padding-top: var(--space-lg);
-  }
-</style>
