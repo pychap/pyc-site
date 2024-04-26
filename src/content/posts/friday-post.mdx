@@ -8,7 +8,13 @@ image: '/src/content/posts/images/learn-the-basics-of-html.jpg'
 tags: ["astro", "blogging", "learning in public"]
 isDraft: false
 ---
-## A New Day Today, Friday
+import Image from "astro/components/Image.astro";
+import Picture from "astro/components/Picture.astro";
+import brianHead from './images/brianHead-lifts.jpg';
+
+
+<Picture src={brianHead} alt="great fun back then" format="avif" />
+# A New Day Today, Friday
 
 1. **Installing Astro**: 1st, I created a new Astro project and set up my online accounts.
 
