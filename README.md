@@ -6,6 +6,7 @@
 ```
 
 ```
+![Peter Chapman](./src/assets/navigation-mobile.png)
 
 
 ## 🧞 Image of home page will be here
