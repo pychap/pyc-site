@@ -6,7 +6,7 @@
 ```
 
 ```
-![Peter Chapman](./src/assets/navigation-mobile.png)
+![Peter Chapman](./src/assets/img/website-home-min.png)
 
 
 ## 🧞 Image of home page will be here

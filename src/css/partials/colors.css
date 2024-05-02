@@ -11,3 +11,13 @@
   stroke: var(--indigo-4);
   stroke-width: 25px;
 }
+
+.alert {
+  background-color: var(--camo-1);
+  border-radius: var(--radius-drawn-4);
+}
+
+.dark .alert {
+  background-color: var(--jungle-12);
+  
+}

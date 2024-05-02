@@ -259,3 +259,15 @@ button.btn-custom {
   justify-items: center;
   gap: var(--size-5);
 }
+
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert p {
+  margin: 0;
+}
