@@ -8,7 +8,7 @@ import { getCollection } from "astro:content";
 import PostCard from "@/components/ui/PostCard.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import me from "@/assets/avatar.jpg";
+import me from "@/assets/img/avatar.jpg";
 import Link from "../../components/ui/Link.astro";
 import Heading from "@/components/ui/Heading.astro";
 
@@ -27,18 +27,19 @@ const { page } = Astro.props;
 <Layout title=`Bloggy Thoughts | Page ${page.currentPage}`>
   <main class="content-grid blog">
     <article class="wrapper flow">
-      <Heading tagName="h1" size="h1" align="center">My Blog</Heading>
+      <Heading tagName="h1" size="h1" align="center">Articles</Heading>
       <div class="switcher">
         <div>
           <h2 class="text-primary">
-            Blog.
+            UI, Visuals, Trends, Web Development and various insights.
           </h2>
+          <p>Bloggy Thoughts</p>
           <p>Page {page.currentPage}</p>
             <Image class="avatar" src={me} width={120} format="avif" alt="Profile image for Peter Chapman" />
 
         </div>
         <div class="grid-wrapper">
-          <!-- <h3>Add something interesting to this subhead.</h3> -->
+          <h4>Each post covers some challenge I've met during my Front-end development work.</h4>
           {
             page.data.map((post) => (
               <PostCard post={post} />
