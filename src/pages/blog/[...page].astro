@@ -18,7 +18,7 @@ export const getStaticPaths = (async ({ paginate }) => {
   // most recent is sorted first
   return paginate(allPosts.sort((b, a) => new Date(b.data.pubDate).getUTCDate() - new Date(a.data.pubDate).getUTCDate()
   ), 
-  { pageSize: 3 });
+  { pageSize: 2 });
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
@@ -30,16 +30,15 @@ const { page } = Astro.props;
       <Heading tagName="h1" size="h1" align="center">Articles</Heading>
       <div class="switcher">
         <div>
-          <h2 class="text-primary">
+          <Heading tagName="h3" size="h3" align="center">
             UI, Visuals, Trends, Web Development and various insights.
-          </h2>
-          <p>Bloggy Thoughts</p>
-          <p>Page {page.currentPage}</p>
-            <Image class="avatar" src={me} width={120} format="avif" alt="Profile image for Peter Chapman" />
+          </Heading>
+          <p class="center">Each post covers some challenge I've met during my Front-end development work. Or, just thoughts.</p>
+          <p class="center">Page {page.currentPage}</p>
+            <!-- <Image class="avatar" src={me} width={120} format="avif" alt="Profile image for Peter Chapman" /> -->
 
         </div>
         <div class="grid-wrapper">
-          <h4>Each post covers some challenge I've met during my Front-end development work.</h4>
           {
             page.data.map((post) => (
               <PostCard post={post} />
@@ -65,7 +64,7 @@ const { page } = Astro.props;
   .grid-wrapper {
     display: grid;
     gap: var(--size-5);
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
     margin: var(--space-lg) var(--space-3xs);
   }
   .pagination {

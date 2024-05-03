@@ -93,6 +93,11 @@
   font-size: var(--font-size-fluid-4);
 }
 
+.blog h1, .blog h3, .blog p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .features h2 {
   justify-self: center;
 }
@@ -129,6 +134,10 @@ h1 {
   color: var(--gray-4);
 }
 
+.center {
+  text-align: center;
+}
+
 /* from astro */
 .text-gradient {
   background-image: var(--accent-gradient);
@@ -150,4 +159,24 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-size: 400%;
   background-position: 0%;
+}
+time {
+  line-height: 0.625;
+}
+.pill {
+  display: inline-flex;
+  padding: 1rem;
+  background-color: var(--stone-3);
+  border-radius: var(--radius-blob-3);
+}
+
+.dark .pill {
+  background-color: var(--stone-10);
+}
+
+.pill p {
+  margin: 0 .25rem 0 0;
+  font-size: var(--font-size-fluid-0);
+  line-height: var(--font-lineheight-00);
+  height: min-content;
 }

@@ -271,3 +271,8 @@ button.btn-custom {
 .alert p {
   margin: 0;
 }
+
+picture {
+  display: block;
+  margin-bottom: var(--space-lg);
+}
