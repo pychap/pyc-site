@@ -1,0 +1,34 @@
+---
+title: 'A Complex Responsive Modal'
+author: 'Peter Chapman'
+description: 'Building a complex, responsive modal for Chalk application downloads.'
+pubDate: 2024-06-04
+image: '/src/content/posts/images/learn-the-basics-of-html.jpg'
+    # alt: 'The full Astro logo.'
+tags: ["astro", "blogging", "learning in public"]
+isDraft: false
+---
+import Image from "astro/components/Image.astro";
+import Picture from "astro/components/Picture.astro";
+import brianHead from './images/chalk-app-modal.png';
+
+
+<Picture src={brianHead} alt="great fun back then" format="avif" />
+## Building a modal with multiple functional requirements
+### Requirements
+
+UX and Product presented to me this concept of a modal, to launch at initial login, that would have multiple functionalities:
+* Modal to have two main parts; the initial screen and a user-option to slide in screen of "Try Out a Session", where a brief description of a session is described and a trial run could be initiated via download of the application
+* The modal needed to contain three cards for the three applications: Desktop, iOS &amp; Android, and RealWear
+* Each card to have an image 
+* Each card to have Title, benefit pills, bullet list of features and benefits, two with CTAs.
+* iOS card to have a slide animation on CTA click, next slide to have QR code and App store buttons for app download
+* User could easily dismiss modal if not interested
+
+All of our applications were built in [Lit](https://lit.dev/) which uses the ShadowDOM method. Most styling needed to be encapsulated within the component – excepting where CSS Properties were called. 
+
+I used CSS Grid to layout the two states: the responsive view and the wide desktop view. In the responsive view the cards were to take on a stacked landscape orientation, in desktop view, horizontal portrait alingment. The iOS card also needed to adjust its sliding orientation from portrait to landscape.
+
+Once the JavaScript was in place to enable the slider, next to be done was the card and content build.
+
+---

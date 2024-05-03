@@ -98,6 +98,10 @@
   margin-left: auto;
 }
 
+h2 {
+  letter-spacing: -.08rem;
+  line-height: var(--font-lineheight-0);
+}
 .features h2 {
   justify-self: center;
 }
@@ -136,6 +140,8 @@ h1 {
 
 .center {
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* from astro */
@@ -162,6 +168,7 @@ h1 {
 }
 time {
   line-height: 0.625;
+  font-size: var(--font-size-fluid-0);
 }
 .pill {
   display: inline-flex;
