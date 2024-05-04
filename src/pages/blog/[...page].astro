@@ -65,6 +65,12 @@ const { page } = Astro.props;
     grid-template-columns: repeat(2, minmax(250px, 1fr));
     margin: var(--space-lg) var(--space-3xs);
   }
+
+  @media screen and (max-width: 583px) {
+    .grid-wrapper {
+      grid-template-columns: minmax(250px,1fr);
+  }
+  }
   .pagination {
     margin: var(--space-lg) var(--space-3xs);
   }
