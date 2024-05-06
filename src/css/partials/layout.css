@@ -232,8 +232,6 @@ ul.social {
   align-items: center;
 }
 a {
-  padding: 0.5rem;
-  color: var(--gray-6);
   text-decoration: none;
 }
 .dark .social {

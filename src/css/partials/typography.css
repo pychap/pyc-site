@@ -111,6 +111,11 @@ nav span {
   letter-spacing: var(--font-letterspacing-1);
 }
 
+span>a {
+  font-family: "Alegreya Sans 500", sans-serif;
+  font-weight: var(--font-weight-5);
+}
+
 strong {
   font-family: "Alegreya Sans 500", sans-serif;
   font-weight: var(--font-weight-5);
