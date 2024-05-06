@@ -11,6 +11,7 @@ isDraft: false
 import Image from "astro/components/Image.astro";
 import Picture from "astro/components/Picture.astro";
 import chalkOnboarding from './images/chalk-app-modal.png';
+import { Vimeo, YouTube } from 'astro-embed';
 
 
 <Picture src={chalkOnboarding} alt="Onboarding Modal, Chalk" format="avif" width="660" />
@@ -31,14 +32,21 @@ I used CSS `grid` to layout the two states: the responsive view and the wide des
 
 Once the JavaScript was in place to enable the slider, the next part to be done were the cards with respecitve content and they needed to be responsive per the Figma comps. The completion of this part in the 1st video below:
 
-<div class="video-player" style="padding:105.49% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/943059317?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Onboarding Modal, Initial Structure"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="video-player" style="width: 760px">
+    <YouTube id="https://youtube.com/shorts/CjriBcucnmU?feature=share" params="rel=0" />
+</div>
+
 
 Next the entire content needed to slide left to reveal the "Try Out a Session" section, revealing an image, marketing copy, app download QR Code and app store buttons, and also be responsive. 
 
-<div class="video-player" style="padding:107.9% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/943059920?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Onboarding Modal - Try Out a Session Slider"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="video-player" style="width: 760px">
+    <Vimeo id="https://vimeo.com/943059920?share=copy" />
+</div>
 
 Finally the iOS and Android card had to individually slide left to reveal an image, marketing copy, app download QR Code and app store buttons, and also be responsive.
-<div class="video-player" style="padding:121.36% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/943058024?h=0a536189b0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="video-player" style="width: 760px">
+    <YouTube id="https://youtube.com/shorts/zIPXwlgiR5s?feature=share" params="rel=0" />
+</div>
 
 Success! and a highly functional modal.
 
