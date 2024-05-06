@@ -10,10 +10,10 @@ isDraft: false
 ---
 import Image from "astro/components/Image.astro";
 import Picture from "astro/components/Picture.astro";
-import brianHead from './images/chalk-app-modal.png';
+import chalkOnboarding from './images/chalk-app-modal.png';
 
 
-<Picture src={brianHead} alt="Onboarding Modal, Chalk" format="avif" width="660" />
+<Picture src={chalkOnboarding} alt="Onboarding Modal, Chalk" format="avif" width="660" />
 ## Building a modal with multiple functional requirements
 ### Requirements
 
@@ -25,7 +25,7 @@ UX and Product presented to me this concept of a modal, to launch at initial log
 * iOS card to have a slide animation on CTA click, next slide to have QR code and App store buttons for app download
 * User could easily dismiss modal if not interested
 
-All of our applications were built in [Lit](https://lit.dev/) which uses the ShadowDOM method. Most styling needed to be encapsulated within the component &mdash; excepting where CSS Properties were called. 
+All of our applications were built in <span class="link">[LitHTML](https://lit.dev/)</span> which uses the ShadowDOM method. Most styling needed to be encapsulated within the component &mdash; excepting where CSS Properties were called. 
 
 I used CSS `grid` to layout the two states: the responsive view and the wide desktop view. In the responsive view the cards were to take on a stacked landscape orientation, in desktop view, horizontal portrait alingment. The iOS card also needed to adjust its sliding orientation from portrait to landscape.
 
