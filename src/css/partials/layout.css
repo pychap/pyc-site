@@ -86,6 +86,7 @@ main {
 
 /* =========== Thanks to Kevin Powell ============== */
 .content-grid {
+  justify-items: center;
   --padding-inline: 1rem;
   --content-max-width: 900px;
   --breakout-max-width: 1200px;
@@ -276,4 +277,8 @@ button.btn-custom {
 picture {
   display: block;
   margin-bottom: var(--space-lg);
+}
+
+form {
+  margin-bottom: var(--space-xl);
 }
