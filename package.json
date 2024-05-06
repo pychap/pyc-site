@@ -16,26 +16,26 @@
     "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/netlify": "^5.2.0",
-    "@astrojs/preact": "^3.1.1",
-    "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/preact": "^3.2.0",
+    "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.5.1",
+    "astro": "^4.7.1",
     "astro-icon": "^1.1.0",
     "flowbite": "^2.3.0",
-    "open-props": "^1.6.10",
+    "open-props": "^1.7.4",
     "purgecss": "^5.0.0",
     "rough-notation": "^0.5.1",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
     "postcss-cli": "^10.1.0",
-    "postcss-custom-media": "^10.0.2",
+    "postcss-custom-media": "^10.0.6",
     "postcss-import": "^15.1.0",
     "postcss-jit-props": "^1.0.14",
-    "postcss-nesting": "^12.1.1",
-    "postcss-preset-env": "^9.3.0",
+    "postcss-nesting": "^12.1.2",
+    "postcss-preset-env": "^9.5.11",
     "typescript": "^5.4.5"
   }
 }
