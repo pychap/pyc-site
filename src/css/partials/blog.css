@@ -5,5 +5,11 @@
 
 .video-player {
   margin-bottom: 2rem;
-  max-width: 640px;
+  width: fit-content;
+  height: auto;
+  max-width: 840px;
+}
+
+.video-player lite-vimeo {
+  background-image: none !important;
 }
