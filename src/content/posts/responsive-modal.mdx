@@ -11,7 +11,7 @@ isDraft: false
 import Image from "astro/components/Image.astro";
 import Picture from "astro/components/Picture.astro";
 import chalkOnboarding from './images/chalk-app-modal.png';
-import { Vimeo, YouTube } from 'astro-embed';
+import { Vimeo } from 'astro-embed';
 
 
 <Picture src={chalkOnboarding} alt="Onboarding Modal, Chalk" format="avif" width="660" />
@@ -32,23 +32,22 @@ I used CSS `grid` to layout the two states: the responsive view and the wide des
 
 Once the JavaScript was in place to enable the slider, the next part to be done were the cards with respecitve content and they needed to be responsive per the Figma comps. The completion of this part in the 1st video below:
 
-<div class="video-player" style="width: 760px">
-    <YouTube id="https://youtube.com/shorts/CjriBcucnmU?feature=share" params="rel=0" />
+<div class="video-player" style="width: 100%">
+    <Vimeo id="https://vimeo.com/943059317?share=copy"  posterQuality="max" />
 </div>
 
 
 Next the entire content needed to slide left to reveal the "Try Out a Session" section, revealing an image, marketing copy, app download QR Code and app store buttons, and also be responsive. 
 
-<div class="video-player" style="width: 760px">
-    <Vimeo id="https://vimeo.com/943059920?share=copy" />
+<div class="video-player" style="width: 100%">
+    <Vimeo id="https://vimeo.com/943059920?share=copy" posterQuality="max" />
 </div>
 
 Finally the iOS and Android card had to individually slide left to reveal an image, marketing copy, app download QR Code and app store buttons, and also be responsive.
-<div class="video-player" style="width: 760px">
-    <YouTube id="https://youtube.com/shorts/zIPXwlgiR5s?feature=share" params="rel=0" />
+<div class="video-player" style="width: 100%">
+    <Vimeo id="https://vimeo.com/943058024?share=copy" posterQuality="max" />
 </div>
 
-Success! and a highly functional modal.
-
-
+Success! and a highly functional modal.  
+  
 ---
