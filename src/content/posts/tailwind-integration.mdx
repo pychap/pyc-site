@@ -1,0 +1,40 @@
+---
+title: 'Presentation: TailwindCSS into Lit'
+author: 'Peter Chapman'
+description: 'Bringing Tailwind into the Lit ShadowDOM environment was challenging.'
+pubDate: 2024-05-07
+image: '/src/content/posts/images/learn-the-basics-of-html.jpg'
+    # alt: 'Tailwind logo'
+tags: ["astro", "blogging", "tailwind"]
+isDraft: false
+---
+import Picture from "astro/components/Picture.astro";
+import tailwindLong from "./images/tailwind-long.png";
+import LitHTMLsvg from "./images/litHTML.svg";
+import { YouTube } from "astro-embed";
+
+<Picture src={tailwindLong} alt="The TailwindCSS logo" format="avif" />
+**Integrating the TailwindCSS framework into a complex established enterprise application; a presentation I gave to about 60 developers.**
+
+The Chalk product team I was a part of included two applications: one called Desktop, and the other named Dalton Player. The Dalton Player application was the engine for the Chalk Augmented Reality application. Both of these applications were well established, customer-facing, with multiple complex functionalities. Both were built in LitHTML containing multiple components with thousands of lines of code. It was crucial that this introduction would need to harmonize with the existing structure and not introduce breaking changes.
+
+**The DRY, Utility Class Approach**   
+The CSS for these applications was growing at a concerning rate. Although not entirely the UI Developers fault, at the time there were approximately 81 colors and 35+ font sizes managed on roughly 68 SCSS files. Many lines of CSS were being repeated. This situation was in need of CSS Utility Classes. Enter TailwindCSS.  
+
+**<span class="svg__lit"><Picture src={LitHTMLsvg} format="svg" alt="The LitHTML" width={55} /></span>Challenge: Using TailwindCSS in Lit's ShadowDOM environment**   
+Lit creates a ShadowDOM environment for each component instantiated. Unfortunately, this is negates the use of "native" TailwindCSS out of the box due to the inability of styles to penetrate the barrier of this environment. In my presentation I cover how we got around this using the <span class="link">[Twind.style](https://twind.style/)</span> library which one of my colleagues helped set up.  
+
+**Customization**   
+In the presentation I detail all the configurations in the `tailwind.config` file to customize Tailwind to our application, I discuss the simplification Tailwind provided us as well as the lighter build footprint.
+
+Before I left the Chalk team, by moving many of the repeating styles into Tailwind's utility properties, I had reduced the external SCSS files by near 50%. The task was left unfinished, I know I could have done even more.  
+
+### The Presentation 
+Now that most of the major challenges had been overcome, it was time to pitch it to the PTC Development Engineering team. 
+
+ <div class="video-player" style="width: 100%;">
+   <YouTube id="https://youtu.be/KuumssEnPTw" 
+   title="Tailwind Integration in a Shadow DOM Environment" posterQuality="max" /> 
+ </div>
+ 
+  ---
