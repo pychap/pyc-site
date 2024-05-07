@@ -11,5 +11,8 @@
 }
 
 .video-player lite-vimeo {
-  background-image: none !important;
+  /* background-image: none !important; */
+}
+.video-player lite-youtube {
+  margin: 0 auto;
 }
