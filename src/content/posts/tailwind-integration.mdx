@@ -22,7 +22,7 @@ The Chalk product team I was a part of included two applications: one called Des
 **The DRY, Utility Class Approach**   
 The CSS for these applications was growing at a concerning rate. Although not entirely the UI Developers fault, at the time there were approximately 81 colors and 35+ font sizes managed on roughly 68 SCSS files. Many lines of CSS were being repeated. This situation was in need of CSS Utility Classes. Enter TailwindCSS.  
 
-**<span class="svg__lit"><Image src={LitHTMLsvg} format="svg" alt="The LitHTML" width={80} /></span>The Challenge: Using TailwindCSS in Lit's ShadowDOM environment**   
+**<span class="svg__lit"><img src={LitHTMLsvg.src} width={LitHTMLsvg.width} height={LitHTMLsvg.height} alt="The LitHTML" /></span>The Challenge: Using TailwindCSS in Lit's ShadowDOM environment**   
 Lit creates a ShadowDOM environment for each component instantiated. Unfortunately, this is negates the use of "native" TailwindCSS out of the box due to the inability of styles to penetrate the barrier of this environment. In my presentation I cover how we got around this using the <span class="link">[Twind.style](https://twind.style/)</span> library which one of my colleagues helped set up.  
 
 **Customization**   

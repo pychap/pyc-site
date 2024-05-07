@@ -18,5 +18,7 @@
 }
 
 .svg__lit img {
+  width: 85px;
+  height: auto;
   margin-bottom: 1rem;
 }
