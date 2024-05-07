@@ -17,8 +17,6 @@
   margin: 0 auto;
 }
 
-.svg__lit picture {
-  display: inline-block;
-  margin-right: 1rem;
-  margin-bottom: 0;
+.svg__lit img {
+  margin-bottom: 1rem;
 }
