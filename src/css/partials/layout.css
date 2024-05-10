@@ -172,7 +172,7 @@ hr {
   margin-block: var(--size-fluid-2);
 }
 
-.dark code {
+.dark p code {
   background-color: var(--gray-7);
 }
 
