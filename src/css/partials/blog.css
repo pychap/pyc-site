@@ -7,11 +7,15 @@
   margin-bottom: 2rem;
   width: fit-content;
   height: auto;
-  max-width: 840px;
+  max-width: 730px;
 }
 
 .video-player lite-vimeo {
-  /* background-image: none !important; */
+  background-image: none !important;
+  background-color: var(--gray-3);
+}
+.dark .video-player lite-vimeo {
+  background-color: var(--gray-8);
 }
 .video-player lite-youtube {
   margin: 0 auto;
@@ -19,4 +23,27 @@
 
 .svg__lit img {
   margin-bottom: 1rem;
+}
+
+p>em {
+  font-family: "Alegreya Sans 200i";
+}
+
+.blog-post h2, .blog-post h3, .blog-post h4 {
+  max-width: fit-content;
+}
+
+.dark hr {
+  opacity: 0.3;
+}
+
+.blog-post header p {
+  text-align: center;
+}
+
+.border__drawn {
+  inline-size: var(--size-14);
+  border: transparent var(--border-size-4) solid;
+  border-radius: var(--radius-drawn-6);
+  background-image: var(--gradient-3);
 }
