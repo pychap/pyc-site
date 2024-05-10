@@ -34,6 +34,7 @@ const { title, pubDate, description } = post.data;
 
 <Layout title={title}>
   <main class="content-grid blog-post">
+    <div class="w-full py-2 back-to-blog content-grid">&lsaquo; <a href="/blog/">Back to Blog main</a></div>
     <section class="post-metadata">
       <header>
         <FormattedDate pubDate={pubDate} />
@@ -47,7 +48,7 @@ const { title, pubDate, description } = post.data;
     <section class="author-metadata" aria-label="Author Metadata">
       <div>
         <Image src={me} width={140} height={140} format="avif" alt="Profile image for Peter Chapman" />
-        <Heading tagName="h2" size="h3" align="left"><a href="/about/">About me ›</a></Heading>
+        <Heading tagName="h2" size="h3" align="left"><a href="/about/">About me &rsaquo;</a></Heading>
         <p>I am a web developer with years of experience in Frontend development.</p>
       </div>
     </section>
