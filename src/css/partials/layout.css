@@ -253,6 +253,10 @@ button.btn-custom {
   background-image: var(--_bg);
 }
 
+a.btn.primary {
+  background-image: var(--gradient-19);
+}
+
 .blog-post__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

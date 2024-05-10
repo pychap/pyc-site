@@ -16,16 +16,16 @@ import Technologies from "@/components/ui/Technologies.astro";
     class="content-grid home"
     transition:animate={fade({ duration: "0.7s" })}
   >
-    <div class="flex items-center">
+    <div class="flex items-center w-full">
       <Image
         src={peter}
         alt="Peter's avatar"
-        class="rounded-full w-12 h-12 avatar"
+        class="w-12 h-12 mr-4 rounded-full avatar"
         format="webp"
       />
-      <h1 class="ml-4"><span class="text-gradient">Welcome</span></h1>
+      <Heading tagName="h1" size="h1" align="left"><span class="text-gradient">Welcome to my website</span></Heading>
     </div>
-    <Heading tagName="h2" size="h2" align="left">The Power of the Internet</Heading>
+    <Heading tagName="h2" size="h2" align="left">The Power of the Internet to Serve your Business</Heading>
     <div class="alert">
       <p class="text-sm text-gray-500">This website is under construction and is not yet fully functional. In mobile view, if you navigate to a page you will need to refresh the page for the hamburger menu to work again. The blog section will have content soon.</p>
     </div>
@@ -34,10 +34,10 @@ import Technologies from "@/components/ui/Technologies.astro";
     <p>I have years of experience in building web pages, applications and websites for internal and external clients. If you'd like to &ldquo;cut to the chase&rdquo; and contact me, click the button below, and I'll get back to you as soon as possible. Or if you want to browse around feel free!</p>
     <div class="buttons__multiple">
       <a href="/contact/"
-        ><button class="btn-custom mb-4">Contact me &rsaquo;</button></a
+        ><button class="mb-4 btn-custom">Contact me &rsaquo;</button></a
       >
       <a href="/about/"
-        ><button class="btn-custom mb-4">About me &rsaquo;</button></a
+        ><button class="mb-4 btn-custom">About me &rsaquo;</button></a
       >
     </div>
     <FeaturesBanner />

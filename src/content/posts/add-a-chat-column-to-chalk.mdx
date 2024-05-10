@@ -1,0 +1,107 @@
+---
+title: 'Adding a Chat Column to an Existing Layout'
+author: 'Peter Chapman'
+description: 'Adding a column for chat'
+pubDate: 2024-05-08
+image: '/src/content/posts/images/learn-the-basics-of-html.jpg'
+  # alt: 'Blogs image'
+isDraft: false
+tags: ["astro", "blogging", "learning in public"]
+---
+
+import { Vimeo } from "astro-embed";
+import Picture from "astro/components/Picture.astro";
+import worrying from "./images/how-to-stop-worrying-about-keeping-up.jpg";
+
+
+## Request from Product &amp; Customers: Add Chat to Chalk
+
+#### Whaaaat?? 🤔 
+<Picture src={worrying} alt="Maybe I cannot do this!" format="avif" width={440} class="border__drawn" />
+
+### Okay this one's going to be a challenge! 
+So how does one take an existing full width layout, with multiple interactive elements, push it aside to make room for a chat column about one fifth of the width, and secondly, has to be outside of the application container?  
+
+And then how does this work without distorting the main focus element - the live video display?
+
+The challenge was enough to make me sweat heavily and think thoughts like _"this is the end of my career_", "_I truly am an imposter_". 😬 😬 But alas &mdash; problem solving: break the problem down into bits, deal with the bits one at a time.
+
+Because I no longer have access to the repo, the code, I'm recalling these steps and the code from memory. 
+
+First bit; the click event on the chat button, nestled within several components, had to be captured and sent up to the top application level. Then elements assigned to variables, and classes toggled. 
+```javascript
+// shadowRoot is Lit's way of capturing elements
+const chatButton = shadowRoot.querySelector(".container__application button");
+const appContainer = shadowRoot.querySelector(".container__application");
+const expandChat = shadowRoot.querySelector(".col__chat");
+
+
+chatButton.addEventListener("click", () => {
+  appContainer.classList.toggle("chat");
+  expandChat.classList.toggle("slide-left");
+})
+```
+
+Secondly I added a new `div` to this application level and assigned a `display: grid;` to the new container and assigned two columns, one collapsed.
+
+```css
+.container__application {
+  display: grid;
+  grid-template-columns: 1fr 0;
+}
+```
+
+Next the class to toggle to create the chat column:
+
+```css
+  /* hurrah for CSS nesting! */
+.container__application {
+  &.chat {
+    grid-template-columns: 1fr 325px;
+  }
+}
+```
+
+The new HTML was set up similar to this:
+```html
+<div class="container__application">
+  <div class="content__body">
+    <h1>Application</h1>
+    <button>Open chat</button>
+  </div>
+  <div class="col__chat">
+    <div>Chat column content</div>
+  </div>
+</div>
+```
+
+Then for the nice user experience, a slide-in animation from left to right:
+```css 
+.slide-left {
+    animation: 
+      slide-left 0.5s 
+      cubic-bezier(0.250, 0.460, 0.450, 0.940) 
+      both;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+```
+
+The video capture below is an earlier one that I managed to save before leaving the company. Sorry to say it is sub-par at best. I created it to point to overall functionality. You'll see that the send button is off-screen at the beginning and the whole video is a _little slow_. When I was laid-off I didn't have a lot of time to think about all the things like this recording redo (I'll have a separate post soon on the big team layoff). I also lost access to the application as it's behind the company firewall, or, you must have an account to access Chalk.
+
+<div class="video-player" style="width: 100%;">
+  <Vimeo id="https://vimeo.com/944271340?share=copy"
+    params="#t=1m26s" />
+</div>
+
+*Every single elemement seen in this application I coded in place, everything.* 
+
+
+---
