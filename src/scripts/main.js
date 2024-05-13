@@ -1,8 +1,6 @@
 function enableThemeToggle() {
   const themeToggleDarkIcon = document.querySelector("#theme-toggle-dark-icon");
-  const themeToggleLightIcon = document.querySelector(
-    "#theme-toggle-light-icon"
-  );
+  const themeToggleLightIcon = document.querySelector("#theme-toggle-light-icon");
 
   // Change the icons inside the button based on previous settings
 
@@ -47,5 +45,4 @@ function enableThemeToggle() {
 }
 
 enableThemeToggle();
-
 document.addEventListener("astro:after-swap", enableThemeToggle);
