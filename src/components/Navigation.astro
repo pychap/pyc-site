@@ -1,166 +1,190 @@
 ---
+import DarkModeSwitcher from "./ui/DarkModeSwitcher.astro";
+
 
 ---
 
 <nav
-  class="bg-white border-gray-200 px- bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800"
+  class="relative z-50 bg-white border-gray-200"
 >
-  <div class="container mx-auto flex flex-wrap items-center justify-between">
-    <!-- mobile menu -->
-    <button
-      id="mobileMenuFour"
-      data-collapse-toggle="mobile-menu-4"
-      type="button"
-      class="md:hidden text-gray-500 hover:bg-gray-100focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-lg text-sm p-2 inline-flex items-center dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      aria-controls="mobile-menu-4"
-      aria-expanded="false"
-    >
-      <span class="sr-only">Open main menu</span>
-      <svg
-        class="w-6 h-6"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        ><path
-          fill-rule="evenodd"
-          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-          clip-rule="evenodd"></path></svg
-      >
-      <svg
-        class="hidden w-6 h-6"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        ><path
-          fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-          clip-rule="evenodd"></path></svg
-      >
-    </button>
+<section class="top-nav">
+  <div class="logo">
     <a href="/" class="flex">
       <!-- my personal log goes here -->
       <span
         class="self-center text-lg font-semibold whitespace-nowrap dark:text-white p-text-gradient"
-        >Website Code &amp; Aesthetic</span
+        >Web Code &amp; Aesthetic</span
       >
     </a>
-    <div class="flex md:order-2">
-      <!-- Dark mode switcher -->
-      <button
-        id="theme-toggle"
-        type="button"
-        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-      >
-        <svg
-          id="theme-toggle-dark-icon"
-          class="w-5 h-5 hidden"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-          ></path>
-        </svg>
-        <svg
-          id="theme-toggle-light-icon"
-          class="w-5 h-5 hidden"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-            fill-rule="evenodd"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-      <!-- Dark mode switcher end -->
-    </div>
-    <!-- navigation menu for mobile -->
-    <div
-      class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1"
-      id="mobile-menu-4"
-    >
-      <ul
-        class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium"
-      >
-        <li>
-          <a
-            href="/"
-            class="md:bg-transparent text-gray-700 block pl-3 pr-4 py-2 md:p-0 rounded dark:text-white"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="/about/"
-            class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="/blog/"
-            class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >Blog</a
-          >
-        </li>
-        <li>
-          <a
-            href="/contact/"
-            class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </div>
   </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+  <div class='menu-button'></div>
+</label>
+  <ul class="menu">
+    <li><a
+      href="/"
+      class="block text-gray-700 dark:text-white"
+      >Home</a></li>
+    <li><a
+      href="/about/"
+      class="text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+      >About</a></li>
+    <li><a
+      href="/blog/"
+      class="text-gray-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+      >Blog</a></li>
+    <li><a
+      href="/contact/"
+      class="text-gray-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+      >Contact</a></li>
+  </ul>
+  <DarkModeSwitcher />
+</section>
 </nav>
 
-<script>
-  // import { Collapse } from "flowbite";
-  // import type { CollapseOptions, CollapseInterface } from "flowbite";
-  // import type { InstanceOptions } from "flowbite";
+<style>
+  .logo {
+    transform: translateX(0);
+  }
+  .top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 1em;
+  }
 
-  // // set the target element that will be collapsed or expanded (eg. navbar menu)
-  // const $targetEl: HTMLElement = document.getElementById("mobile-menu-4");
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
-  // // optionally set a trigger element (eg. a button, hamburger icon)
-  // const $triggerEl: HTMLElement = document.getElementById("mobileMenuFour");
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
 
-  // // optional options with default values and callback functions
-  // const options: CollapseOptions = {
-  //   onCollapse: () => {
-  //     console.log("element has been collapsed");
-  //   },
-  //   onExpand: () => {
-  //     console.log("element has been expanded");
-  //   },
-  //   onToggle: () => {
-  //     console.log("element has been toggled");
-  //   },
-  // };
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    position: absolute;
+    width: 40px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: tan; */
+  }
 
-  // // instance options object
-  // const instanceOptions: InstanceOptions = {
-  //   id: "targetEl",
-  //   override: true,
-  // };
+  #menu-toggle {
+    display: none;
+  }
 
-  // /*
-  //  * $targetEl: required
-  //  * $triggerEl: optional
-  //  * options: optional
-  //  * instanceOptions: optional
-  //  */
-  // const collapse: CollapseInterface = new Collapse(
-  //   $targetEl,
-  //   $triggerEl,
-  //   options,
-  //   instanceOptions
-  // );
+  .menu-button {
+    left: 0.3rem;
+  }
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: var(--stone-8);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
 
-  // // show the target element
-  // collapse.expand();
-</script>
+  .menu-button::before {
+    content: "";
+    margin-top: -8px;
+  }
+
+  .menu-button::after {
+    content: "";
+    margin-top: 8px;
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+  @media (max-width: 700px) {
+    nav {
+      position: fixed;
+      background-color: #fff;
+    }
+    .logo {
+      transform: translateX(55px);
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: fixed;
+      top: 10px;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 20px 24px rgba(17, 17, 26, 0.21), 0px 66px 15px rgba(17, 17, 26, 0.16), 0px 24px 11px rgba(17, 17, 26, 0.2);
+    }
+
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      min-width: 100vw;
+      /* border: 1px solid #333; */
+      height: 3em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: start;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: white;
+      background-color: white;
+    }
+
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+
+    .menu > li > a {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      padding-left: 1.5rem;
+    }
+
+    .menu > li > a:hover {
+      background-color: var(--gray-0);
+    }
+  }
+  
+</style>

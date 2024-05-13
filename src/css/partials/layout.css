@@ -288,3 +288,16 @@ form {
 hr {
   width: 100%;
 }
+
+@media (max-width: 700px) {
+  .dark nav {
+    background-color: var(--gray-10) !important;
+  }
+  .dark .menu li {
+    background-color: var(--gray-9) !important;
+  }
+
+  .dark .menu > li > a:hover {
+    background-color: var(--gray-10) !important;
+  }
+}
