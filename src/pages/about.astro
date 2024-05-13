@@ -1,11 +1,12 @@
 ---
+import Heading from "@/components/ui/Heading.astro";
 import Layout from "../layouts/Layout.astro";
 const pageTitle = "About";
 ---
 
 <Layout title={pageTitle}>
   <main class="content-grid about">
-    <h1>About me</h1>
+    <Heading tagName="h1" size="h1" align="center">{pageTitle} Me</Heading>
     <p>
       My first job was at age 14 (thanks to help from my dad), in which I helped
       around an Architecture office. As a kid at that time I was interested in
