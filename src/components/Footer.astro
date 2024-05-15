@@ -1,27 +1,28 @@
 ---
 import Social from "@ui/Social.astro";
 const today = new Date();
+const pathParse = Astro.url.pathname.split("/")[1];
 ---
 
 <footer class="full-width bg-white shadow px-4">
       <ul class="nav--footer flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-              <a href="/" class={Astro.url.pathname.split("/")[1] === ""
+              <a href="/" class={pathParse === ""
           ? "active footer-link"
           : "footer-link"}>Home</a>
       </li>
       <li>
-          <a href="/about/" class={Astro.url.pathname.split("/")[1] === "about"
+          <a href="/about/" class={pathParse === "about"
           ? "active footer-link"
           : "footer-link"}>About</a>
       </li>
       <li>
-          <a href="/blog/" class={Astro.url.pathname.split("/")[1] === "blog"
+          <a href="/blog/" class={pathParse === "blog"
           ? "active footer-link"
           : "footer-link"}>Blog</a>
       </li>
       <li>
-          <a href="/contact/" class={Astro.url.pathname.split("/")[1] === "contact"
+          <a href="/contact/" class={pathParse === "contact"
           ? "active footer-link"
           : "footer-link"}>Contact</a>
       </li>
