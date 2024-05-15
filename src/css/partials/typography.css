@@ -110,6 +110,24 @@ nav span {
   font-family: "Alegreya Sans 900", sans-serif;
   letter-spacing: var(--font-letterspacing-1);
 }
+.dark nav li {
+  color: var(--gray-5) !important;
+}
+nav.a {
+  color: var(--gray-9);
+}
+.dark nav.a {
+  color: var(--gray-5) !important;
+}
+nav a.active {
+  font-family: "Alegreya Sans 500", sans-serif;
+  font-weight: var(--font-weight-5);
+}
+.dark nav a.active:visited {
+  font-family: "Alegreya Sans 500", sans-serif;
+  font-weight: var(--font-weight-5);
+  color: var(--gray-5);
+}
 
 span>a {
   font-family: "Alegreya Sans 500", sans-serif;
