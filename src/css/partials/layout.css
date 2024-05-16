@@ -274,6 +274,7 @@ a.btn.primary {
 
 .alert p {
   margin: 0;
+  font-size: var(--size-000);
 }
 
 picture {
