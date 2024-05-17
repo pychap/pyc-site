@@ -1,11 +1,12 @@
 ---
 import Heading from "@/components/ui/Heading.astro";
 import Layout from "../layouts/Layout.astro";
+import { fade } from "astro:transitions";
 const pageTitle = "About";
 ---
 
 <Layout title={pageTitle}>
-  <main class="content-grid about">
+  <main class="content-grid about" transition:animate={fade({ duration: "0.7s" })}>
     <Heading tagName="h1" size="h1" align="center">{pageTitle} Me</Heading>
     <p>
       My first job was at age 14 (thanks to help from my dad), in which I helped

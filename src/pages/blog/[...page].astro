@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from "astro";
 // Astro assets
 import { getCollection } from "astro:content";
+import { fade } from "astro:transitions";
 
 // components
 import PostCard from "@/components/ui/PostCard.astro";
@@ -23,7 +24,7 @@ const { page } = Astro.props;
 ---
 
 <Layout title=`Bloggy Thoughts | Page ${page.currentPage}`>
-  <main class="content-grid blog">
+  <main class="content-grid blog" transition:animate={fade({ duration: "0.7s" })}>
     <article class="wrapper flow">
       <Heading tagName="h1" size="h1" align="center">Articles</Heading>
       <div class="switcher">
