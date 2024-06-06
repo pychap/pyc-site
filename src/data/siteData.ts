@@ -14,11 +14,11 @@ export const socialData = [
     href: "https://discord.com/",
     icon: "icon--discord",
   },
-  {
-    title: "twitter",
-    href: "https://twitter.com/pychap",
-    icon: "icon--twitter",
-  },
+  // {
+  //   title: "twitter",
+  //   href: "https://twitter.com/pychap",
+  //   icon: "icon--twitter",
+  // },
   {
     title: "youtube",
     href: "https://www.youtube.com/@PeterChapman-py",
