@@ -29,7 +29,12 @@ import { Icon } from "astro-icon/components";
     {
       innerTechData.map(({ title, href, icon }) => (
         <li>
-          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={title}>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={title}
+          >
             <Icon name={icon} size={55} />
           </a>
           <Heading tagName="h3" size="h3" align="center">
@@ -39,7 +44,7 @@ import { Icon } from "astro-icon/components";
       ))
     }
   </ul>
-  <ul class="mt-2 web-powers list-none">
+  <ul class="mt-2 web-powers list-none" style="display: flex;">
     <li><strong>Design system: </strong>OpenProps &amp; Tailwind</li>
   </ul>
 </section>
@@ -48,6 +53,14 @@ import { Icon } from "astro-icon/components";
   .technologies {
     place-items: center;
     padding-top: var(--space-lg);
+  }
+
+  @media screen and (min-width: 600px) {
+    .web-powers {
+      columns: 210px 2;
+      column-rule: 1px dotted gray;
+      gap: 4rem;
+    }
   }
 
   .web-powers li {
