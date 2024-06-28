@@ -27,11 +27,13 @@
   margin-bottom: 1rem;
 }
 
-p>em {
+p > em {
   font-family: "Alegreya Sans 200i";
 }
 
-.blog-post h2, .blog-post h3, .blog-post h4 {
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
   max-width: fit-content;
 }
 
@@ -54,7 +56,7 @@ p>em {
   justify-items: start;
 }
 .dark .back-to-blog {
-color: var(--gray-4);
+  color: var(--gray-4);
 }
 
 .back-to-blog a {
@@ -64,4 +66,41 @@ color: var(--gray-4);
 }
 .back-to-blog a:hover {
   border-bottom: 1px dotted var(--gray-7);
+}
+
+.author-metadata {
+  margin: 1.5rem 0;
+}
+.author-metadata > div {
+  display: flex;
+  align-items: center;
+  font-size: ;
+}
+
+.avatar-img {
+  display: flex;
+  justify-content: center;
+  width: 75px;
+  margin-right: 1rem;
+}
+.avatar-text h2 {
+  margin: 0;
+}
+.avatar-text p {
+  font-size: 1rem;
+  width: 27ch;
+  margin: 0;
+}
+
+.author-metadata img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.blog-page_astro-list ul li {
+  list-style: disc;
+}
+
+.blog-page_astro-list ul li ul li {
+  list-style: circle;
 }
