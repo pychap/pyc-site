@@ -1,0 +1,46 @@
+---
+title: 'Building This Site Using The Astro Framework'
+author: 'Peter Chapman'
+description: 'How I used the framework Astro to build this website.'
+pubDate: 2024-06-12
+image: '/src/content/posts/images/astro-blog-image.jpg'
+    # alt: 'The full Astro logo.'
+tags: ["astro", "blogging", "Frameworks"]
+isDraft: false
+---
+import Picture from "astro/components/Picture.astro";
+import astroHero from "./images/astro-blog-image.jpg"
+
+<Picture src={astroHero} alt="Astro logo on SpaceX launch" format="avif" />
+
+## A Phenomenally Fun Framework To Build In!
+
+What is Astro? Let's take the description straight from their website: "*Astro is a JavaScript web framework optimized for building fast, content-driven websites.*" Did I hear that right? "*... a JavaScript web framework ..."* ? I point that out because Astro isn't normally listed with the "big" frameworks, although that is starting to change. And for those looking on job boards, the postings are mostly for React and Angular devs with the assumption, I guess, that those two are worlds apart from the other frameworks out there. 😂
+
+#### Guiding Lights 🔦
+
+I have a ton of gratitude for the various tutorials out there that have helped me to level-up my skills: Kevin Powell's, James Quick, Traversy Media to name a few. However I feel a special shout-out should go to Chris Pennington's <span class="link__color">[Coding In Public](https://www.youtube.com/@CodinginPublic)</span>. Initially his short videos got me hooked, which led me to  purchasing his <span class="link__color"> [Learn&nbsp;Astro&nbsp;course](https://learnastro.dev/)</span>.  
+
+This course pretty much completed my love affair with the Astro framework. I highly recommend this course if you're interested. It goes without saying that the devs and content writers have built a great library of documentation at <span class="link__color">[Astro Docs](https://docs.astro.build/en/getting-started/)</span>.
+
+#### What Makes Astro So Great? Here's a few of the parts I like:
+<span class="blog-page_astro-list">
+    + Component based
+      - Having component based architecture aligns with the Separation of Concerns principle – bundling HTML, classes for CSS, and JavaScript into one tight container
+    + Speed
+      - Because Astro only loads JavaScript on the client-side when needed, there's no heavy delivery of unneeded code. Plus, there's really cool image optimization features built in
+    + Ease of setup, ease of logic
+      - It just works! `npm create astro@latest`
+    * Markdown & MDX support
+      - Okay, full disclosure, I _love_ Markdown. And then with full MDX support (via Astro integration) to be able to use Astro components (the above SpaceX photo, nav, hero, footer, heading, about etc.) and JavaScript in Markdown is just the "cat's meow"
+    * Astro Icon 
+      - Icons are wicked easy to use in Astro with the Astro Icon integration
+    * TailwindCSS integration
+      - Although I tend to write my own CSS it's really helpful to know that so many of the more common utility classes are quick to add through Tailwind 
+    * Content collections
+      - Content collections help organize, validate and provide TypeScript type-safety for Markdown content 
+    * So many other goodies
+      - Astro Islands, Client-side or Server-side content delivery, Prefetching, Page Transitions, Image optimization, the new Astro dB. 
+
+    I plan on integrating a Content Management System (CMS) just to see it work. Likely, it will be [Storyblock CMS](https://www.storyblok.com/). Keep checking back!   
+</span>

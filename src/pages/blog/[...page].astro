@@ -15,7 +15,7 @@ import Heading from "@/components/ui/Heading.astro";
 export const getStaticPaths = (async ({ paginate }) => {
   const allPosts = await getCollection("posts", ({ data }) => !data.isDraft);
   // most recent is sorted first
-  return paginate(allPosts.sort((b, a) => new Date(b.data.pubDate).getUTCDate() - new Date(a.data.pubDate).getUTCDate()
+  return paginate(allPosts.sort((a, b) => new Date(b.data.pubDate).getUTCDate() - new Date(a.data.pubDate).getUTCDate()
   ), 
   { pageSize: 2 });
 }) satisfies GetStaticPaths;
@@ -30,7 +30,7 @@ const { page } = Astro.props;
       <div class="switcher">
         <div>
           <Heading tagName="h3" size="h3" align="center">
-            UI, Visuals, Trends, Web Development and various insights.
+            Writings on UI, Visuals, Trends, Web Development and various insights.
           </Heading>
           <p class="center">Each post covers some challenge I've met during my Front-end development work. Or, just thoughts.</p>
           <p class="center">Page {page.currentPage}</p>
