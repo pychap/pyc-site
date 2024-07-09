@@ -6,7 +6,8 @@
 ```
 
 ```
-![Peter Chapman](./src/assets/img/website-home-min.png)
+
+<img src="./src/assets/img/pyc-site-capture.jpg" width=400 alt="screen capture of my website home page" />
 
 
 ## 🧞 Image of home page will be here
