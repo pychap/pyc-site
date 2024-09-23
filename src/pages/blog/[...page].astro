@@ -17,7 +17,7 @@ export const getStaticPaths = (async ({ paginate }) => {
   // most recent is sorted first
   return paginate(allPosts.sort((a, b) => new Date(b.data.pubDate).getUTCDate() - new Date(a.data.pubDate).getUTCDate()
   ), 
-  { pageSize: 2 });
+  { pageSize: 3 });
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
@@ -63,13 +63,19 @@ const { page } = Astro.props;
   .grid-wrapper {
     display: grid;
     gap: var(--size-5);
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    place-content: center;
     margin: var(--space-lg) var(--space-3xs);
   }
-
+ /* 830px - 583px */
+  @media screen and (min-width: 584px) and (max-width: 830px) {
+    .grid-wrapper {
+      grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  }
   @media screen and (max-width: 583px) {
     .grid-wrapper {
-      grid-template-columns: minmax(250px,1fr);
+      grid-template-columns: minmax(250px,350px);
   }
   }
   .pagination {

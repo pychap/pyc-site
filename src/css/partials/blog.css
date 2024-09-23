@@ -1,6 +1,16 @@
 .post-content ul {
-  list-style: lower-alpha;
-  margin-left: 1rem;
+  list-style: disc;
+  & li {
+    margin-bottom: .5rem;
+  }
+}
+
+.post-content figcaption {
+  justify-self: start;
+  margin: -4.2rem 0 0 1rem;
+  font-size: smaller;
+  color: wheat;
+  opacity: .8;
 }
 
 .video-player {
@@ -29,6 +39,10 @@
 
 p > em {
   font-family: "Alegreya Sans 200i";
+}
+
+span>a {
+  font-family: "Alegreya Sans 200n", sans-serif;
 }
 
 .blog-post h2,
