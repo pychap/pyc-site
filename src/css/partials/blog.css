@@ -5,14 +5,6 @@
   }
 }
 
-.post-content figcaption {
-  justify-self: start;
-  margin: -4.2rem 0 0 1rem;
-  font-size: smaller;
-  color: wheat;
-  opacity: .8;
-}
-
 .video-player {
   margin-bottom: 2rem;
   width: fit-content;
@@ -68,9 +60,10 @@ span>a {
 
 .back-to-blog {
   justify-items: start;
+  font-size: var(--size-3);
 }
-.dark .back-to-blog {
-  color: var(--gray-4);
+.dark .back-to-blog a {
+  color: var(--gray-5);
 }
 
 .back-to-blog a {
