@@ -1,0 +1,30 @@
+---
+import { string } from "astro/zod"
+
+interface Props {
+  name: string;
+  artistUrl: string;
+  photoUrl: string;
+  isDark?: boolean;
+}
+
+const { name, artistUrl, photoUrl, isDark } = Astro.props;
+---
+
+<figcaption class:list={["default__figcaption", {dark: isDark}]}>
+  Background photo by 
+  <a href={artistUrl} target="_blank" rel="noopener noreferrer"><strong>{name}</strong></a> on <a href={photoUrl} target="_blank" rel="noopener noreferrer">Unsplash</a>.
+</figcaption>
+
+<style>
+  .default__figcaption {
+  justify-self: start;
+  margin: -3.5rem 0 0 1rem;
+  font-size: var(--size-2);
+  color: var(--gray-9);
+  opacity: .8;
+  &.dark {
+    color: var(--gray-5);
+  }
+}
+</style>

@@ -10,8 +10,11 @@ isDraft: false
 ---
 import Picture from "astro/components/Picture.astro";
 import astroHero from "./images/astro-blog-image.jpg"
+import FigCaption from "../../components/ui/FigCaption.astro";
 
 <Picture src={astroHero} alt="Astro logo on SpaceX launch" format="avif" />
+
+<FigCaption isDark={true} name="SpaceX" artistUrl="https://unsplash.com/@spacex?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" photoUrl="https://unsplash.com/photos/ray-of-light-near-body-of-water--p-KCm6xB9I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" />
 
 ## A Phenomenally Fun Framework To Build In!
 

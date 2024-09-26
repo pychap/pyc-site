@@ -1,4 +1,5 @@
 ---
+import FigCaption from "./ui/FigCaption.astro";
 ---
 
 <section
@@ -13,6 +14,5 @@
     </p>
     
   </div>
-  <span class="absolute font-extralight bottom-3 text-xs text-gray-600 left-3">Background photo by <a href="https://unsplash.com/@danielkorpai?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Daniel Korpai</a> on <a href="https://unsplash.com/photos/turned-on-laptop-on-table-HyTwtsk8XqA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
-</span>
+  <FigCaption isDark={true} name="Daniel Korpai" artistUrl="https://unsplash.com/@danielkorpai" photoUrl="https://unsplash.com/photos/turned-on-laptop-on-table-HyTwtsk8XqA" />
 </section>

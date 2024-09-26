@@ -8,11 +8,12 @@ tags: ["astro", "blogging", "Frameworks"]
 isDraft: false
 ---
 import Picture from "astro/components/Picture.astro";
-import astroHero from "./images/articles-tools.jpg"
+import astroHero from "./images/articles-tools.jpg";
+import FigCaption from "../../components/ui/FigCaption.astro"; 
 
 <Picture src={astroHero} alt="Astro logo on SpaceX launch" format="avif" />
 
-<figcaption>Background photo by <a href="https://unsplash.com/@sweetmangostudios?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ricky  Kharawala</a> on <a href="https://unsplash.com/photos/assorted-hand-tool-lot-on-brown-wooden-shelf-4dVDBMAho8c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
+<FigCaption isDark={true} name="Ricky Kharawala" artistUrl="https://unsplash.com/@sweetmangostudios?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" photoUrl="https://unsplash.com/photos/assorted-hand-tool-lot-on-brown-wooden-shelf-4dVDBMAho8c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" />
 
 ## "Tell me, what tools do you use?"
 
@@ -28,7 +29,7 @@ In hindsight, I've categorized my tools into six key areas—Terminal, VS Code, 
 *	<strong>oh-my-zsh</strong> - can't say enough about this brilliant library: npm, git web search and more alias's that enable almost full control from your terminal
 *	<strong>Node</strong> - do I need to comment on this? LOL
 *	<strong>npm, pnpm</strong> - same as above
-* <strong>Amazon Q</strong> - if you haven't looked into this helper, you must! One example; when pushing branches up where you can't remember the exact name you gave it
+* <strong>Amazon Q</strong> - if you haven't looked into this helper, you must! One example; when pushing branches up where you can't remember the exact name you gave it 😂
 * <strong>Git</strong> 
 ### [The Mighty] VS Code IDE. Tools (although a tool itself!)
 * <strong>Prettier</strong> - extension

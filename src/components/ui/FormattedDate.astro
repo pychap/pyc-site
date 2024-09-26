@@ -6,7 +6,13 @@ type Props = {
 const { pubDate } = Astro.props;
 ---
 
-<div class="pill mt-4">
-  <p class="">Published:</p>
-  <time datetime={pubDate.toISOString()} class="text-tertiary"><strong>{pubDate.toLocaleDateString()}</strong></time>
+<div class="mt-4">
+  <p class="pub__date-time">Published:
+  <time datetime={pubDate.toISOString()} class=""><strong>{pubDate.toLocaleDateString()}</strong></time></p>
 </div>
+
+<style>
+  .pub__date-time {
+    font-size: var(--size-3);
+  }
+</style>
