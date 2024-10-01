@@ -8,6 +8,7 @@ import { Image } from "astro:assets";
 const title = "Peter's website";
 import peter from "../assets/img/avatar.jpg";
 import Technologies from "@/components/ui/Technologies.astro";
+import Button from "@/components/ui/Button.astro";
 ---
 
 <Layout title={title}>
@@ -27,19 +28,19 @@ import Technologies from "@/components/ui/Technologies.astro";
       <Image
         src={peter}
         alt="Peter's avatar"
-        class="w-12 h-12 mr-4 rounded-full avatar float-left"
+        class="float-left w-12 h-12 mr-4 rounded-full avatar"
         format="webp"
       />
       Do you need a website? Does your website need a refreshed look? Do you need a part of you site worked on, perhaps images redone or content changed? Perhaps one page or section is confused, not cohesive?</p>
     <p>I can take your business thoughts and ideas for a greater online presence and turn them into reality.</p>
     <p>I have years of experience in building web pages, applications and websites for internal and external clients. If you'd like to &ldquo;cut to the chase&rdquo; and contact me, click the button below, and I'll get back to you as soon as possible. Or if you want to browse around feel free!</p>
     <div class="buttons__multiple">
-      <a href="/contact/"
-        ><button class="mb-4 btn-custom">Contact me &rsaquo;</button></a
-      >
-      <a href="/about/"
-        ><button class="mb-4 btn-custom">About me &rsaquo;</button></a
-      >
+      <a href="/contact/">
+        <Button type="button" classes={"btn-custom"} isFilled size="sm">Contact me &rsaquo;</Button>
+      </a>
+      <a href="/about/">
+      <Button theme="primary" type="button" classes={"btn-custom"} isFilled size="sm">About me &rsaquo;</Button>
+    </a>
     </div>
     <FeaturesBanner />
     <Technologies />
