@@ -47,7 +47,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
 .dark nav {
   background-color: var(--bg-dark-container);
 }
@@ -172,7 +171,8 @@ hr {
   margin-block: var(--size-fluid-2);
 }
 
-.dark p code, .dark li code {
+.dark p code,
+.dark li code {
   background-color: var(--gray-7);
 }
 
@@ -218,9 +218,9 @@ footer {
 
 .dark footer {
   background-color: var(--bg-dark-container);
-
 }
-.dark footer a.active, .dark footer a.active:visited {
+.dark footer a.active,
+.dark footer a.active:visited {
   color: var(--white);
 }
 
@@ -238,20 +238,28 @@ a {
   color: var(--gray-4);
 }
 
+.buttons__multiple {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 button {
   padding-block: 0.75ch;
   padding-inline: var(--size-relative-6);
   background-image: var(--_bg);
   color: var(--_text);
 }
-
+/* 
 button.btn-custom {
-  --_bg: linear-gradient(var(--indigo-5), var(--indigo-7));
-  --_border: var(--indigo-6);
+  --_bg: linear-gradient(var(--blue-3), var(--blue-7));
+  --_border: var(--blue-6);
   --_text: var(--indigo-0);
-  --_ink-shadow: 0 1px 0 var(--indigo-9);
+  --_ink-shadow: 0 1px 0 var(--blue-9);
   background-image: var(--_bg);
-}
+} */
 
 a.btn.primary {
   background-image: var(--gradient-19);
@@ -305,22 +313,21 @@ hr {
 
 .link__color a {
   text-decoration: none;
-  background:
-  linear-gradient(
-    to right,
-    rgba(100, 200, 200, 1),
-    rgba(100, 200, 200, 1)
-  ),
-  linear-gradient(
-    to right,
-    rgba(255, 0, 0, 1),
-    rgba(255, 0, 180, 1),
-    rgba(0, 100, 200, 1)
-);
-background-size: 100% 3px, 0 3px;
-background-position: 100% 100%, 0 100%;
-background-repeat: no-repeat;
-transition: background-size 400ms;
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
 }
 
 .link__color a:hover {

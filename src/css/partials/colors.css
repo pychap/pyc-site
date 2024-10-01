@@ -1,5 +1,13 @@
 :root {
   --white: hsla(0, 0%, 100%, 1);
+  --primary: var(--blue-4);
+  --secondary: var(--stone-6);
+  --success: var(--green-4);
+  --danger: var(--red-7);
+  --warning: var(--yellow-5);
+  --info: var(--blue-3);
+  --light: var(--stone-0);
+  --dark: var(--gray-8);
 }
 
 .op-icon-p {
@@ -19,7 +27,6 @@
 
 .dark .alert {
   background-color: var(--jungle-12);
-  
 }
 
 pre.astro-code {
