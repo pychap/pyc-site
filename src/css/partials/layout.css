@@ -252,14 +252,14 @@ button {
   background-image: var(--_bg);
   color: var(--_text);
 }
-/* 
+
 button.btn-custom {
   --_bg: linear-gradient(var(--blue-3), var(--blue-7));
   --_border: var(--blue-6);
   --_text: var(--indigo-0);
   --_ink-shadow: 0 1px 0 var(--blue-9);
   background-image: var(--_bg);
-} */
+}
 
 a.btn.primary {
   background-image: var(--gradient-19);
