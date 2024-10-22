@@ -1,0 +1,95 @@
+---
+
+---
+
+<section id="skills" class="skills">
+  <div class="main">
+    <header class="header__skills">
+      <h2>Skills/Experience Levels</h2>
+      <p>
+        Built with <span class="link__color"
+          ><a
+            href="https://www.chartjs.org"
+            target="_blank"
+            rel="noopener noreferrer">Chart.js</a
+          ></span>
+      </p>
+    </header>
+    <div class="box">
+      <canvas
+        data-size="1025"
+        id="vertical-chart"
+        aria-label="Oscar's Skills Graph On Desktop"
+        role="img"></canvas>
+      <canvas
+        data-size="1024"
+        id="horizontal-chart"
+        aria-label="Oscar's Skills Graph On Mobile"
+        role="img"></canvas>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --vertical-padding: 3rem;
+    --horizontal-padding: 4%;
+    --vertical-spacing: 2.5rem;
+  }
+  .main {
+    max-width: 92%;
+    width: 100%;
+    margin: auto;
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+  }
+
+  .skills {
+    padding: var(--vertical-padding) 0;
+  }
+
+  .header__skills {
+    text-align: center;
+    margin-bottom: var(--vertical-spacing);
+  }
+
+  .header__skills h2 {
+    margin: auto;
+    text-align: center;
+    font-size: var(--font-size-fluid-2);
+    color: var(--gray-10);
+    letter-spacing: 0.1rem;
+  }
+
+  .header__skills p {
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    font-size: var(--font-size-fluid-0);
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    display: none !important;
+    visibility: hidden !important;
+    font-family: "Alegreya Sans 200n", sans-serif !important;
+  }
+
+
+  @media screen and (min-width: 1025px) {
+    [data-size="1025"] {
+      display: block !important;
+      visibility: visible !important;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    [data-size="1024"] {
+      display: block !important;
+      visibility: visible !important;
+    }
+  }
+</style>
+
+<script src="../../scripts/developmentSkills.js"></script>
