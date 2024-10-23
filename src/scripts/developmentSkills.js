@@ -1,8 +1,6 @@
-// import "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js";
-import "../scripts/Chart";
+import Chart from 'chart.js/auto';
 
-Chart.defaults.global.defaultFontFamily = "Alegreya Sans 200n";
-
+Chart.defaults.font.family = "Alegreya Sans 200n";
 
 // Get Vertical bar chart canvas element
 const bar_ctx_v = document.querySelector("#vertical-chart").getContext("2d");
@@ -11,6 +9,7 @@ const bar_ctx_v = document.querySelector("#vertical-chart").getContext("2d");
 const gradientColorV = bar_ctx_v.createLinearGradient(0, 0, 0, 700);
 gradientColorV.addColorStop(0, "#68BAE5");
 gradientColorV.addColorStop(1, "#014F90");
+// console.log(gradientColorV); // Check if gradient object is valid.
 
 // Vertical gradient two
 const gradientHoverV = bar_ctx_v.createLinearGradient(0, 0, 0, 700);
@@ -22,28 +21,29 @@ const bar_chart_v = new Chart(bar_ctx_v, {
   type: "bar",
   data: {
     labels: [
-      "H T M L 5",
-      "C S S 3",
-      "J A V A S C R I P T",
-      "A S T R O  J S",
-      "R E A C T  J S",
-      "S Q L",
-      "T A I L W I N D  C S S",
-      "C O L L A B O R A T I O N",
+      "HTML 5",
+      "CSS 3",
+      "JAVASCRIPT",
+      "ASTRO JS",
+      "REACT JS",
+      "TYPESCRIPT",
+      "TAILWIND CSS",
+      "COLLABORATION",
     ],
     datasets: [
       {
-        label: "  SKILL SCORE",
-        data: [96, 96, 67, 92, 67, 29, 89, 98],
+        label: " SKILL SCORE",
+        data: [96, 96, 67, 92, 67, 25, 89, 98],
         backgroundColor: gradientColorV,
         hoverBackgroundColor: gradientHoverV,
-        hoverBorderWidth: .5,
+        hoverBorderWidth: 0.5,
         hoverBorderColor: "#ffffff",
       },
     ],
   },
   options: {
     responsive: true,
+    indexAxis: "x",
     maintainAspectRatio: true,
     layout: {
       padding: {
@@ -56,42 +56,48 @@ const bar_chart_v = new Chart(bar_ctx_v, {
     legend: {
       display: false,
     },
-    animation: {
-      duration: 3000,
-      easing: "easeInExpo",
+    animations: {
+      tension: {
+        duration: 3000,
+        easing: "easeInExpo",
+        from: 1,
+        to: 0,
+        loop: false,
+      },
     },
     scales: {
-      yAxes: [
-        {
-          gridLines: {
-            lineWidth: .5,
-            color: "hsl(210 14% 85%)",
-          },
-          ticks: {
-            min: 25,
-            max: 100,
-            stepSize: 25,
-            fontSize: 13,
-            fontColor: "hsl(210 14% 55%)",
+      y: {
+        grid: {
+          lineWidth: 0.5,
+          color: "hsl(210 14% 85%)",
+        },
+        ticks: {
+          min: 25,
+          max: 100,
+          stepSize: 25,
+          font: {
             family: "Alegreya Sans 200n",
+            size: 13,
+            color: "hsl(210 14% 55%)",
           },
         },
-      ],
-      xAxes: [
-        {
-          gridLines: {
-            display: false,
-          },
-          ticks: {
-            fontSize: 13,
-            fontColor: "hsl(210 10.8% 65%)",
-            padding: 10,
-          },
-          barPercentage: 0.6,
+      },
+      x: {
+        grid: {
+          display: false,
         },
-      ],
+        ticks: {
+          font: {
+            family: "Alegreya Sans 200n",
+            size: 13,
+            color: "hsl(210 10.8% 65%)",
+          },
+          padding: 10,
+        },
+        barPercentage: 1,
+      },
     },
-    tooltips: {
+    tooltip: {
       backgroundColor: "#495057",
       titleFontFamily: "Alegreya Sans 200n",
       titleFontColor: "#68BAE5",
@@ -105,8 +111,7 @@ const bar_chart_v = new Chart(bar_ctx_v, {
       borderWidth: 2,
       caretSize: 5,
       cornerRadius: 5,
-      xPadding: 15,
-      yPadding: 15,
+      padding: 15,
     },
   },
 });
@@ -126,7 +131,7 @@ gradientHoverH.addColorStop(1, "#68BAE5");
 
 // Vertical bar chart options
 const bar_chart_h = new Chart(bar_ctx_h, {
-  type: "horizontalBar",
+  type: "bar",
   data: {
     labels: [
       "H T M L 5",
@@ -134,14 +139,14 @@ const bar_chart_h = new Chart(bar_ctx_h, {
       "J A V A S C R I P T",
       "A S T R O  J S",
       "R E A C T  J S",
-      "S Q L",
+      "T Y P E S C R I P T",
       "T A I L W I N D  C S S",
       "C O L L A B O R A T I O N",
     ],
     datasets: [
       {
         label: "  SKILL SCORE",
-        data: [96, 96, 67, 92, 67, 29, 85, 98],
+        data: [96, 96, 67, 92, 67, 25, 85, 98],
         backgroundColor: gradientColorH,
         hoverBackgroundColor: gradientHoverH,
         hoverBorderWidth: 1,
@@ -150,6 +155,7 @@ const bar_chart_h = new Chart(bar_ctx_h, {
     ],
   },
   options: {
+    indexAxis: "y",
     responsive: true,
     maintainAspectRatio: true,
     layout: {
@@ -165,37 +171,36 @@ const bar_chart_h = new Chart(bar_ctx_h, {
     },
     animation: {
       duration: 3000,
-      easing: "easeInExpo",
+      easing: "easeInOutQuart",
     },
     scales: {
-      yAxes: [
-        {
-          gridLines: {
-            display: false,
-          },
-          ticks: {
-            fontSize: 13,
-            fontColor: "hsl(210 14% 55%)",
-            family: "Alegreya Sans 200n",
-          },
-          barPercentage: 1,
+      y: {
+        grid: {
+          display: false,
         },
-      ],
-      xAxes: [
-        {
-          gridLines: {
-            lineWidth: .5,
+        ticks: {
+          fontSize: 13,
+          fontColor: "hsl(210 14% 55%)",
+          family: "Alegreya Sans 200n",
+        },
+        barPercentage: 1,
+      },
+      x: {
+        grid: {
+          lineWidth: 0.5,
+          color: "hsl(210 10.8% 65%)",
+        },
+        ticks: {
+          min: 25,
+          max: 100,
+          stepSize: 25,
+          font: {
+            family: "Alegreya Sans 200n",
+            size: 13,
             color: "hsl(210 10.8% 65%)",
           },
-          ticks: {
-            min: 25,
-            max: 100,
-            stepSize: 25,
-            fontSize: 13,
-            fontColor: "hsl(210 10.8% 65%)",
-          },
         },
-      ],
+      },
     },
     tooltips: {
       backgroundColor: "#495057",
@@ -211,8 +216,7 @@ const bar_chart_h = new Chart(bar_ctx_h, {
       borderWidth: 2,
       caretSize: 5,
       cornerRadius: 5,
-      xPadding: 15,
-      yPadding: 15,
+      padding: 15,
     },
   },
 });
