@@ -7,12 +7,14 @@
     <header class="header__skills">
       <h2>Skills/Experience Levels</h2>
       <p>
-        Built with <span class="link__color"
-          ><a
-            href="https://www.chartjs.org"
-            target="_blank"
-            rel="noopener noreferrer">Chart.js</a
-          ></span>
+        <i>
+          Built with <span class="link__color"
+            ><a
+              href="https://www.chartjs.org"
+              target="_blank"
+              rel="noopener noreferrer">Chart.js</a
+            ></span>
+        </i>
       </p>
     </header>
     <div class="box">
@@ -44,6 +46,10 @@
     padding-right: var(--horizontal-padding);
   }
 
+  .box {
+    position: relative;
+  }
+
   .skills {
     padding: var(--vertical-padding) 0;
   }
@@ -66,6 +72,10 @@
     margin: auto;
     padding: 0;
     font-size: var(--font-size-fluid-0);
+
+    & i {
+      font-size: unset;
+    }
   }
 
   canvas {
