@@ -1,5 +1,6 @@
 import Chart from "chart.js/auto";
 
+function enableCharts() {
 Chart.defaults.font.family = "Alegreya Sans 200n";
 document.querySelector("#vertical-chart").style.display = "block";
 document.querySelector("#horizontal-chart").style.display = "block";
@@ -31,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "REACT JS",
         "TYPESCRIPT",
         "TAILWIND CSS",
+        "SCSS",
+        "SQL",
         "COLLABORATION",
       ],
       datasets: [
         {
           label: " SKILL SCORE",
-          data: [96, 96, 67, 92, 67, 25, 89, 98],
+          data: [96, 96, 67, 92, 67, 25, 89, 98, 25, 98],
           backgroundColor: gradientColorV,
           hoverBackgroundColor: gradientHoverV,
           hoverBorderWidth: 0.5,
@@ -61,10 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       animation: {
         tension: {
-          duration: 3000,
+          duration: 4000,
           easing: "easeInExpo",
-          from: 1,
-          to: 0,
+          from: 0,
+          to: 1,
           loop: false,
         },
       },
@@ -146,12 +149,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "R E A C T  J S",
         "T Y P E S C R I P T",
         "T A I L W I N D  C S S",
+        "S C S S",
+        "S Q L",
         "C O L L A B O R A T I O N",
       ],
       datasets: [
         {
           label: "  SKILL SCORE",
-          data: [96, 96, 67, 92, 67, 25, 85, 98],
+          data: [96, 96, 67, 92, 67, 25, 85, 98, 25, 98],
           backgroundColor: gradientColorH,
           hoverBackgroundColor: gradientHoverH,
           hoverBorderWidth: 1,
@@ -175,9 +180,13 @@ document.addEventListener("DOMContentLoaded", () => {
         display: false,
       },
       animation: {
-        duration: 3000,
-        easing: "easeInOutQuart",
-        loop: false,
+        tension: {
+          duration: 4000,
+          easing: "easeInExpo",
+          from: 0,
+          to: 1,
+          loop: false,
+        },
       },
       scales: {
         y: {
@@ -227,3 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+// function end
+}
+
+enableCharts();
