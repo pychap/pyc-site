@@ -1,4 +1,7 @@
 import Chart from "chart.js/auto";
+import ChartDeferred from "chartjs-plugin-deferred";
+
+Chart.register(ChartDeferred);
 
 function enableCharts() {
 Chart.defaults.font.family = "Alegreya Sans 200n";
@@ -39,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       datasets: [
         {
           label: " SKILL SCORE",
-          data: [96, 96, 67, 92, 67, 25, 89, 98, 25, 98],
+          data: [96, 96, 61, 92, 67, 25, 89, 98, 25, 98],
           backgroundColor: gradientColorV,
           hoverBackgroundColor: gradientHoverV,
           hoverBorderWidth: 0.5,
@@ -66,9 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
         tension: {
           duration: 4000,
           easing: "easeInExpo",
-          from: 0,
-          to: 1,
           loop: false,
+        },
+      },
+      plugins: {
+        deferred: {
+          xOffset: 150,
+          yOffset: "50%",
+          delay: 500,
         },
       },
       scales: {
@@ -156,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
       datasets: [
         {
           label: "  SKILL SCORE",
-          data: [96, 96, 67, 92, 67, 25, 85, 98, 25, 98],
+          data: [96, 96, 61, 92, 67, 25, 85, 98, 25, 98],
           backgroundColor: gradientColorH,
           hoverBackgroundColor: gradientHoverH,
           hoverBorderWidth: 1,
@@ -183,8 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
         tension: {
           duration: 4000,
           easing: "easeInExpo",
-          from: 0,
-          to: 1,
           loop: false,
         },
       },
@@ -215,6 +221,13 @@ document.addEventListener("DOMContentLoaded", () => {
               color: "hsl(210 10.8% 65%)",
             },
           },
+        },
+      },
+      plugins: {
+        deferred: {
+          xOffset: 150,
+          yOffset: "50%",
+          delay: 500,
         },
       },
       tooltips: {

@@ -23,6 +23,7 @@
     "astro-embed": "^0.7.2",
     "astro-icon": "^1.1.0",
     "chart.js": "^4.4.5",
+    "chartjs-plugin-deferred": "^2.0.0",
     "flowbite": "^2.3.0",
     "open-props": "^1.7.4",
     "purgecss": "^5.0.0",
@@ -41,5 +42,8 @@
     "postcss-preset-env": "^9.5.11",
     "shiki": "^1.5.1",
     "typescript": "^5.4.5"
-  }
+  },
+  "bundleDependencies": [
+    "chartjs-plugin-deferred"
+  ]
 }
